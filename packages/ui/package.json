@@ -1,6 +1,6 @@
 {
   "name": "@fewcompany/ui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Componentes React e tokens da Few Company para web e desktop.",
   "type": "module",
   "license": "UNLICENSED",

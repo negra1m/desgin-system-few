@@ -2,7 +2,7 @@ import { mkdtempSync, writeFileSync, rmSync, existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve, sep } from 'node:path';
 import { execFileSync } from 'node:child_process';
-const archive = resolve('fewcompany-ui-0.1.0.tgz');
+const archive = resolve('fewcompany-ui-0.2.0.tgz');
 if (!existsSync(archive)) throw new Error('Run npm run pack:ui first.');
 if (!process.env.npm_execpath) throw new Error('Run via npm run test:consumer.');
 const consumer = mkdtempSync(join(tmpdir(), 'few-ui-consumer-'));
@@ -21,7 +21,7 @@ try {
     assert.match(renderToStaticMarkup(createElement(Button, {loading:true}, 'Salvar')), /aria-busy="true"/);
     assert.match(renderToStaticMarkup(createElement(Field, {label:'Nome',children:props => createElement(Input,props)})), /<label/);
     assert.equal(registry.length,17);
-    assert.equal(tokens.color.brand,'#244c38');
+    assert.equal(tokens.color.brand,'#C9AFFF');
     console.log('PASS: tarball installed in an independent React consumer; exports, CSS and rendering work without Next.');
   `);
   execFileSync(process.execPath,['check.mjs'],{cwd:consumer,stdio:'inherit'});

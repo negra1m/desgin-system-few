@@ -7,7 +7,7 @@ import { Button, Field, Input, Progress, DataTable, registry, tokens } from '../
 
 test('registry has unique entries, versions, examples and honest adoption', () => {
   assert.equal(new Set(registry.map(item => item.id)).size, registry.length);
-  for (const item of registry) { assert.equal(item.version, '0.1.0'); assert.ok(item.code && item.origins.length && item.variants.length); assert.deepEqual(item.consumers, ['Catálogo Few']); }
+  for (const item of registry) { assert.equal(item.version, '0.2.0'); assert.ok(item.code && item.origins.length && item.variants.length); assert.deepEqual(item.consumers, ['Catálogo Few']); }
 });
 test('loading button prevents submissions and announces busy state', () => {
   const html = renderToStaticMarkup(createElement(Button, { loading:true }, 'Salvar'));

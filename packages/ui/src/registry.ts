@@ -2,7 +2,7 @@ export interface ComponentRecord {
   id: string; name: string; category: 'Ações' | 'Formulários' | 'Feedback' | 'Dados' | 'Estrutura'; description: string;
   version: string; variants: string[]; origins: string[]; consumers: string[]; code: string;
 }
-const component = (id: string, name: string, category: ComponentRecord['category'], description: string, variants: string[], origins: string[], code: string): ComponentRecord => ({ id, name, category, description, variants, origins, code, version: '0.1.0', consumers: ['Catálogo Few'] });
+const component = (id: string, name: string, category: ComponentRecord['category'], description: string, variants: string[], origins: string[], code: string): ComponentRecord => ({ id, name, category, description, variants, origins, code, version: '0.2.0', consumers: ['Catálogo Few'] });
 export const registry: ComponentRecord[] = [
   component('button','Button','Ações','Uma ação clara, em cada contexto. Estados de carregamento e desabilitado fazem parte do componente.',['primary','secondary','ghost','danger','sm','md','lg','loading'],['Caraminholas · .btn','iFIGHT · ui/button.tsx'],'<Button variant="primary" onClick={save}>Salvar alterações</Button>'),
   component('badge','Badge','Feedback','Status legíveis, com cor e texto. Nunca dependa apenas da cor para comunicar.',['neutral','success','warning','danger','info'],['Caraminholas · .chip','iFIGHT · ui/badge.tsx'],'<Badge tone="success">Pagamento confirmado</Badge>'),

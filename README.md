@@ -31,7 +31,7 @@ O catálogo contém 17 entradas. `Field` e `CardHeader` são componentes auxilia
 Gere o tarball com `npm run pack:ui`. No consumidor:
 
 ```sh
-npm install /caminho/fewcompany-ui-0.1.0.tgz
+npm install /caminho/fewcompany-ui-0.2.0.tgz
 ```
 
 ```tsx
@@ -47,10 +47,10 @@ O pacote ainda não está publicado no registro npm. Distribuição local e work
 
 ## Origem e adoção
 
-Few Company inspira a marca: verde profundo, neutros, tipografia editorial e comunicação direta. Caraminholas inspira formulários, checkout e operações; iFIGHT inspira indicadores, variantes e temas escuros. Os componentes foram generalizados para uma API compartilhada; nenhum serviço, dado de cliente ou segredo foi copiado.
+A marca segue fewcompany.com: azul profundo #0A0A1F, magenta #FF2ECC, lavanda #C9AFFF e azul #38B6FF, com Poppins no catálogo e tipografia de sistema como fallback na biblioteca. Caraminholas inspira formulários, checkout e operações; iFIGHT inspira indicadores, variantes e temas escuros. Os componentes foram generalizados para uma API compartilhada; nenhum serviço, dado de cliente ou segredo foi copiado.
 
 **Consumidor integrado: o catálogo.** Caraminholas e iFIGHT são referências, com migração ainda pendente. O registro não afirma que esses apps já importam o pacote. Consulte [a matriz de adoção](docs/adoption.md).
 
 Compatibilidade web foi validada no catálogo Next e no pacote React. Electron/Tauri devem usar a biblioteca no renderer e receber smoke test no consumidor. Este pacote não oferece componentes nativos de React Native.
 
-Licença: uso interno, `UNLICENSED`, até decisão explícita sobre distribuição pública. Não redistribuímos as fontes comerciais do site Few; a biblioteca usa fontes de sistema.
+Licença: uso interno, `UNLICENSED`, até decisão explícita sobre distribuição pública. Poppins é carregada e hospedada pelo Next no catálogo. A biblioteca permite herdar a fonte do aplicativo e inclui fallback de sistema.

@@ -1,11 +1,13 @@
 # Validação do MVP
 
+Versão atual: 0.2.0. Identidade conferida diretamente no site Few Company. Composição de abertura verificada com pausa e preferência por movimento reduzido; screenshots atualizados em `artifacts/catalog-{desktop,mobile}.png`.
+
 Executada em Windows, Node 22 e Chromium headless:
 
 - `npm run build`: biblioteca TypeScript e catálogo Next 16.3.6 com exportação estática.
 - `npm run typecheck`: biblioteca e catálogo.
 - `npm test`: seis contratos de registry, botão em carregamento, associação de formulário/erro, progresso, tabela vazia e arquivos distribuídos.
-- `npm run pack:ui`: tarball `fewcompany-ui-0.1.0.tgz`, aproximadamente 9 KB compactados, sem dados dos produtos.
+- `npm run pack:ui`: tarball `fewcompany-ui-0.2.0.tgz`,  sem dados dos produtos.
 - `npm run test:consumer`: instala o tarball em projeto React temporário independente; valida imports, CSS, tokens e renderização sem Next.
 - `node scripts/verify-catalog.mjs` com Playwright: navegação, busca, carregamento, temas, modal com Escape e retorno de foco, teclado das abas, deep links, associação de labels e ausência de overflow em 390px. Sem erros de runtime no navegador.
 
