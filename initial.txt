@@ -1,0 +1,1 @@
+a ideia eh criar componentes variados em next, e mantelos aqui para serem usados em todas as nossas aplicações web e desktop em react, fazendo uma super lib e usando um html com sidemenu pra demonstrar os componentes e suas versões e em quais apps estão sendo usados, criar um npm disso se o marketeer (persona) achar viável 

@@ -1,0 +1,16 @@
+{
+  "name": "few-design-system",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": {
+    "dev": "npm run build -w @fewcompany/ui && npm run dev -w @fewcompany/catalog",
+    "build": "npm run build -w @fewcompany/ui && npm run build -w @fewcompany/catalog",
+    "typecheck": "npm run typecheck --workspaces",
+    "pack:ui": "npm pack -w @fewcompany/ui",
+    "test": "node --test tests/package.test.mjs",
+    "test:consumer": "node scripts/verify-consumer.mjs",
+    "preview": "node scripts/serve-export.mjs"
+  },
+  "devDependencies": {"typescript": "^5.9.3", "@types/react": "^19.2.0", "@types/react-dom": "^19.2.0", "@types/node": "^22.0.0"}
+}
