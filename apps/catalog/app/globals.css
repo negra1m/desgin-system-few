@@ -245,7 +245,7 @@ h2 { font-size: 24px; letter-spacing: -.8px; font-weight: 500; line-height: 1.4;
 @media (max-width: 950px) {
   .hero { grid-template-columns: 1fr; padding-top: 35px; padding-bottom: 25px; }
   .hero h1 { font-size: 60px; }
-  .hero-visual { height: 325px; width: 100%; max-width: 470px; margin: 0 auto; }
+  .hero-visual { order: -1; height: 325px; width: 100%; max-width: 470px; margin: 0 auto 28px; }
   .visual-core { top: 17%; }
   .panel-component { top: 7%; left: 3%; }
   .panel-palette { bottom: 14%; right: 0; }

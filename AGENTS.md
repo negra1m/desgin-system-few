@@ -9,4 +9,5 @@
 - Registre origem e uso real separadamente. Caraminholas e iFIGHT são referências até que sejam migrados.
 - Reutilize tokens `--few-*`; preserve teclado, foco, labels e movimento reduzido.
 - Valide pacote, catálogo e tarballs conforme `docs/validation.md`.
+- A partir da 1.0.0 esta lib é o padrão de todos os projetos React/Next da Few. Projetos consumidores propõem PRs aqui para componentes novos ou correções, e reportam qualquer atraso causado pela lib.
 - O MVP inicial pode ser enviado à main conforme autorização do usuário. Publicar no registro npm é um fluxo separado descrito em `docs/npm-strategy.md`.

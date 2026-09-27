@@ -1,14 +1,14 @@
-# Matriz de adoção · 0.3.0
+# Matriz de adoção · 1.0.0
 
 | Produto | Papel atual | Versão consumida |
 | --- | --- | --- |
-| Catálogo Few | Integração real dos pacotes `@fewcompany/core` e `@fewcompany/ui` | 0.3.0 |
+| Catálogo Few | Integração real dos pacotes `@fewcompany/core` e `@fewcompany/ui` | 1.0.0 |
 | Caraminholas | Referência de formulários, cards, checkout e status | Não migrado |
 | iFIGHT | Referência de variantes, indicadores e tema escuro | Não migrado |
 
 Cada entrada em `packages/react/src/registry/<categoria>.ts` descreve variantes, partes, versão, origem, referências de API e consumidores. Atualize `consumers` apenas quando houver uma importação real do pacote no produto e validação da tela migrada.
 
-A versão 0.3.0 muda a API de todos os componentes para composição (partes + `asChild`). Migrações de Caraminholas e iFIGHT devem partir desta versão, não da 0.2.0.
+A versão 1.0.0 muda a API de todos os componentes para composição (partes + `asChild`). Migrações de Caraminholas e iFIGHT devem partir desta versão, não da 0.2.0.
 
 Fontes consultadas no workspace:
 

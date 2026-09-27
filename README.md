@@ -36,7 +36,7 @@ Cada componente é uma raiz com partes, no modelo do Radix: `Tabs`, `Tabs.List`,
 Gere os tarballs com `npm run pack:ui`. No consumidor:
 
 ```sh
-npm install /caminho/fewcompany-core-0.3.0.tgz /caminho/fewcompany-ui-0.3.0.tgz
+npm install /caminho/fewcompany-core-1.0.0.tgz /caminho/fewcompany-ui-1.0.0.tgz
 ```
 
 ```tsx
