@@ -1,0 +1,4 @@
+.few-spinner-root{display:inline-flex;align-items:center;justify-content:center;color:var(--few-muted)}
+.few-spinner-root--sm .few-spinner{width:12px;height:12px;border-width:2px}
+.few-spinner-root--md .few-spinner{width:18px;height:18px;border-width:2px}
+.few-spinner-root--lg .few-spinner{width:26px;height:26px;border-width:3px}

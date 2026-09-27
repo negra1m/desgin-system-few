@@ -1,0 +1,10 @@
+.few-tags-input{font-family:var(--few-font);color:var(--few-ink);font-size:14px;line-height:1.5;display:flex;flex-wrap:wrap;align-items:center;gap:8px;width:100%;min-height:44px;border:1px solid var(--few-line);border-radius:var(--few-radius);background:var(--few-surface);padding:8px 10px}
+.few-tags-input .few-form-label{flex:1 0 100%;margin-bottom:2px}
+.few-tags-input:focus-within{outline:var(--few-ring);outline-offset:var(--few-ring-offset)}
+.few-tags-input[data-disabled]{opacity:.5}
+.few-tags-input-item{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:999px;background:var(--few-soft);font-size:12px}
+.few-tags-input-item-delete{border:0;background:transparent;color:var(--few-muted);cursor:pointer;font-size:13px;line-height:1;padding:0}
+.few-tags-input-item-delete:hover{color:var(--few-danger)}
+.few-tags-input-item-delete:focus-visible{outline:var(--few-ring);outline-offset:2px;border-radius:50%}
+.few-tags-input-input{flex:1;min-width:80px;border:0;background:transparent;min-height:28px;padding:0}
+.few-tags-input-input:focus-visible{outline:none}

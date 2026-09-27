@@ -1,0 +1,11 @@
+/* Núcleo compartilhado por dropdown-menu, context-menu e menubar (menu-core.tsx). */
+.few-menu{inset:auto;margin:0;font-family:var(--few-font);color:var(--few-ink);font-size:14px;line-height:1.4;background:var(--few-surface);border:1px solid var(--few-line);border-radius:var(--few-radius);box-shadow:var(--few-shadow);padding:6px;min-width:180px;max-height:min(400px,70vh);overflow:auto}
+.few-menu-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:calc(var(--few-radius) - 2px);cursor:pointer;user-select:none;position:relative}
+.few-menu-item:focus{outline:0;background:var(--few-soft)}
+.few-menu-item:focus-visible{outline:var(--few-ring);outline-offset:-2px}
+.few-menu-item[data-disabled]{opacity:.5;cursor:not-allowed}
+.few-menu-item[role="menuitemcheckbox"],.few-menu-item[role="menuitemradio"]{padding-left:30px}
+.few-menu-item-indicator{position:absolute;left:10px;display:inline-flex;width:14px;justify-content:center}
+.few-menu-label{padding:8px 10px 4px;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--few-muted)}
+.few-menu-separator{height:1px;background:var(--few-line);margin:6px 4px}
+.few-menu-shortcut{margin-left:auto;padding-left:16px;font-size:11px;color:var(--few-muted);font-family:var(--few-mono)}

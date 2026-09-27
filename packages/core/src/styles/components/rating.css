@@ -1,0 +1,7 @@
+.few-rating{display:inline-flex;gap:4px}
+.few-rating[data-disabled]{opacity:.5}
+.few-rating-item{border:0;background:transparent;padding:2px;cursor:pointer;color:var(--few-line);line-height:0}
+.few-rating-item[data-state="filled"]{color:var(--few-brand)}
+.few-rating-item:disabled{cursor:not-allowed}
+.few-rating-item:focus-visible{outline:var(--few-ring);outline-offset:2px;border-radius:var(--few-radius)}
+.few-rating[data-readonly] .few-rating-item{cursor:default}

@@ -1,0 +1,2 @@
+.few-stack{display:flex;flex-direction:var(--few-stack-direction,column);gap:var(--few-stack-gap,0)}
+@media(min-width:768px){.few-stack[data-responsive]{flex-direction:var(--few-stack-direction-md,var(--few-stack-direction,column))}}

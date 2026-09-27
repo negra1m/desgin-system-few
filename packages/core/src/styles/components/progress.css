@@ -1,0 +1,15 @@
+.few-progress{--few-progress-thickness:6px;display:grid;grid-template-columns:1fr auto;column-gap:8px;row-gap:6px;font-family:var(--few-font);color:var(--few-ink);font-size:12px;width:100%}
+.few-progress--sm{--few-progress-thickness:4px}
+.few-progress--lg{--few-progress-thickness:9px}
+.few-progress-label{grid-column:1;grid-row:1;font-weight:600}
+.few-progress-value{grid-column:2;grid-row:1;color:var(--few-muted);font-variant-numeric:tabular-nums}
+.few-progress-track{grid-column:1/-1;grid-row:2;position:relative;width:100%;height:var(--few-progress-thickness);border-radius:999px;background:var(--few-line);overflow:hidden}
+.few-progress-indicator{position:absolute;inset:0 auto 0 0;height:100%;border-radius:999px;background:var(--few-brand);transition:width var(--few-normal)}
+.few-progress[data-tone="success"] .few-progress-indicator{background:var(--few-success)}
+.few-progress[data-tone="warning"] .few-progress-indicator{background:var(--few-warning)}
+.few-progress[data-tone="danger"] .few-progress-indicator{background:var(--few-danger)}
+.few-progress[data-tone="info"] .few-progress-indicator{background:var(--few-info)}
+.few-progress[data-tone="neutral"] .few-progress-indicator{background:var(--few-muted)}
+.few-progress-indicator[data-state="indeterminate"]{width:35%!important;animation:few-progress-indeterminate 1.2s ease-in-out infinite}
+@keyframes few-progress-indeterminate{0%{transform:translateX(-100%)}100%{transform:translateX(285%)}}
+@media(prefers-reduced-motion:reduce){.few-progress-indicator{transition:none}.few-progress-indicator[data-state="indeterminate"]{animation:none;width:100%!important;opacity:.5}}

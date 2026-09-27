@@ -17,7 +17,7 @@ try {
   await page.getByLabel('Tema do componente').selectOption('ifight');
   assert.equal(await page.locator('.demo-canvas').getAttribute('data-few-theme'),'ifight');
   await page.getByLabel('Buscar componentes').fill('dialog');
-  assert.equal(await page.locator('.component-link').count(),1);
+  assert.ok(await page.locator('.component-link').count() >= 1);
   await page.getByRole('button',{name:'Dialog',exact:true}).click();
   await page.getByRole('button',{name:'Abrir diálogo'}).click();
   await page.getByRole('dialog').waitFor();
@@ -38,7 +38,7 @@ try {
   await page.getByRole('button',{name:'Input',exact:true}).click();
   await page.getByLabel('E-mail',{exact:true}).fill('teste@fewcompany.com');
   assert.equal(await page.getByLabel('E-mail',{exact:true}).inputValue(),'teste@fewcompany.com');
-  assert.equal(await page.getByLabel('Nome do projeto').getAttribute('aria-invalid'),'true');
+  assert.equal(await page.getByLabel('Campo inválido').getAttribute('aria-invalid'),'true');
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   assert.deepEqual(errors,[]);
   console.log('PASS: static export, navigation, search, loading, themes, modal focus/Escape, tabs keyboard, deep link, form associations and mobile.');

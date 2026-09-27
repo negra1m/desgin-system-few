@@ -1,0 +1,5 @@
+.few-form{font-family:var(--few-font);color:var(--few-ink);font-size:14px;line-height:1.5;display:grid;gap:20px}
+.few-form-submit{font:inherit;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:10px 18px;border:1px solid transparent;border-radius:var(--few-radius);font-weight:600;cursor:pointer;background:var(--few-brand);color:var(--few-on-brand);transition:filter var(--few-fast)}
+.few-form-submit:hover:not(:disabled){filter:brightness(.93)}
+.few-form-submit:disabled{opacity:.5;cursor:not-allowed}
+.few-form-submit:focus-visible{outline:var(--few-ring);outline-offset:var(--few-ring-offset)}

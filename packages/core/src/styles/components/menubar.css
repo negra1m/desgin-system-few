@@ -1,0 +1,4 @@
+.few-menubar{display:flex;gap:2px;background:var(--few-surface);border:1px solid var(--few-line);border-radius:var(--few-radius);padding:4px;width:fit-content;font-family:var(--few-font);color:var(--few-ink);font-size:14px}
+.few-menubar-trigger{font:inherit;border:0;background:transparent;color:var(--few-ink);padding:8px 12px;border-radius:calc(var(--few-radius) - 2px);cursor:pointer}
+.few-menubar-trigger:hover,.few-menubar-trigger[data-state="open"]{background:var(--few-soft)}
+.few-menubar-trigger:focus-visible{outline:var(--few-ring);outline-offset:-2px}

@@ -1,0 +1,18 @@
+.few-split-button{font-family:var(--few-font);display:inline-flex;position:relative}
+.few-split-button-action{font:inherit;color:var(--few-on-brand);display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:10px 18px;border:1px solid transparent;border-top-left-radius:var(--few-radius);border-bottom-left-radius:var(--few-radius);font-weight:600;cursor:pointer;background:var(--few-brand);transition:filter var(--few-fast)}
+.few-split-button-action:hover:not(:disabled){filter:brightness(.93)}
+.few-split-button-action:disabled{opacity:.5;cursor:not-allowed}
+.few-split-button-action--secondary{background:var(--few-surface);color:var(--few-ink);border-color:var(--few-line)}
+.few-split-button-action--sm{min-height:34px;padding:6px 12px;font-size:12px}
+.few-split-button-action--lg{min-height:48px;padding:12px 24px}
+.few-split-button-trigger{font:inherit;display:inline-flex;align-items:center;justify-content:center;width:34px;border:1px solid transparent;border-left:1px solid rgba(0,0,0,.18);border-top-right-radius:var(--few-radius);border-bottom-right-radius:var(--few-radius);cursor:pointer;background:var(--few-brand);color:var(--few-on-brand);transition:filter var(--few-fast)}
+.few-split-button-trigger:hover{filter:brightness(.93)}
+.few-split-button-trigger--secondary{background:var(--few-surface);color:var(--few-ink);border-color:var(--few-line);border-left-color:var(--few-line)}
+.few-split-button-caret{width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;transition:transform var(--few-fast)}
+.few-split-button-trigger[data-state="open"] .few-split-button-caret{transform:rotate(180deg)}
+.few-split-button-action:focus-visible,.few-split-button-trigger:focus-visible{outline:var(--few-ring);outline-offset:var(--few-ring-offset);position:relative;z-index:1}
+.few-split-button-content{position:fixed;margin:0;min-width:180px;padding:6px;border:1px solid var(--few-line);border-radius:var(--few-radius);background:var(--few-surface);box-shadow:var(--few-shadow);color:var(--few-ink)}
+.few-split-button-content:not(:popover-open){display:none}
+.few-split-button-item{font:inherit;color:var(--few-ink);display:block;width:100%;text-align:left;border:0;background:transparent;padding:8px 12px;border-radius:calc(var(--few-radius) - 4px);cursor:pointer}
+.few-split-button-item:hover:not([data-disabled]),.few-split-button-item:focus-visible{background:var(--few-soft);outline:none}
+.few-split-button-item[data-disabled]{opacity:.5;cursor:not-allowed}

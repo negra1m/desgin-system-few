@@ -1,0 +1,18 @@
+/* Few UI — base. Tudo é namespaced (few-*). Temas se aplicam a qualquer subárvore via data-few-theme. */
+:root,[data-few-theme="few"]{color-scheme:dark;--few-canvas:#0A0A1F;--few-surface:#12122B;--few-ink:#FAFAFF;--few-muted:#A6A6C0;--few-line:#30304E;--few-brand:#C9AFFF;--few-on-brand:#0A0A1F;--few-accent:#FF2ECC;--few-blue:#38B6FF;--few-gradient:linear-gradient(115deg,#FF2ECC 0%,#C9AFFF 52%,#38B6FF 100%);--few-radius:8px;--few-radius-lg:16px;--few-success:#83E5C0;--few-warning:#F4D48B;--few-danger:#FF9BAE;--few-info:#82CEFF;--few-soft:#20203D;--few-font:var(--font-few-sans,Arial),Helvetica,sans-serif;--few-mono:ui-monospace,Consolas,monospace;--few-ring:2px solid var(--few-brand);--few-ring-offset:3px;--few-fast:140ms;--few-normal:220ms;--few-shadow:0 12px 40px rgba(0,0,0,.35);--few-overlay:rgba(6,6,20,.65)}
+[data-few-theme="dark"]{color-scheme:dark;--few-canvas:#101014;--few-surface:#1A1A20;--few-ink:#FAFAFF;--few-muted:#BABAC5;--few-line:#41414D;--few-brand:#E4D8FA;--few-on-brand:#16121D;--few-accent:#C9AFFF;--few-success:#83E5C0;--few-warning:#F4D48B;--few-danger:#FF9BAE;--few-info:#82CEFF;--few-soft:#282830}
+[data-few-theme="caraminholas"]{color-scheme:light;--few-canvas:#f8f4ee;--few-surface:#fffdf9;--few-ink:#2a2420;--few-muted:#766454;--few-line:#ddccbc;--few-brand:#994524;--few-on-brand:#fff;--few-accent:#e8c6a8;--few-radius:5px;--few-radius-lg:10px;--few-soft:#f0e8dd;--few-success:#256541;--few-warning:#855b0c;--few-danger:#a83232;--few-info:#315f8b;--few-shadow:0 12px 40px rgba(60,40,20,.18);--few-overlay:rgba(42,36,32,.45)}
+[data-few-theme="ifight"]{--few-canvas:#0a0a0a;--few-surface:#171717;--few-ink:#f5f5f5;--few-muted:#b5b5b5;--few-line:#454545;--few-brand:#facc15;--few-on-brand:#171717;--few-accent:#facc15;--few-success:#86efac;--few-warning:#fde68a;--few-danger:#fca5a5;--few-info:#93c5fd;--few-soft:#262626}
+/* Base tipográfica comum a todos os componentes. Cada componente adiciona sua classe raiz aqui via seu próprio CSS (font: inherit nos filhos). */
+[class^="few-"],[class*=" few-"]{box-sizing:border-box}
+.few-root,.few-button,.few-input,.few-badge,.few-card,.few-dialog,.few-tabs,.few-alert,.few-checkbox,.few-switch,.few-table,.few-empty,.few-progress,.few-avatar,.few-field{font-family:var(--few-font);color:var(--few-ink);font-size:14px;line-height:1.5}
+/* Utilidades compartilhadas */
+.few-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.few-muted{color:var(--few-muted);font-size:13px;line-height:1.6}
+.few-label{text-transform:uppercase;font-size:10px;letter-spacing:.12em;color:var(--few-muted)}
+.few-tone--neutral{color:var(--few-muted)}.few-tone--success{color:var(--few-success)}.few-tone--warning{color:var(--few-warning)}.few-tone--danger{color:var(--few-danger)}.few-tone--info{color:var(--few-info)}
+.few-spinner{display:inline-block;width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:few-spin .7s linear infinite}
+@keyframes few-spin{to{transform:rotate(360deg)}}
+@keyframes few-pulse{50%{opacity:.4}}
+@keyframes few-fade-in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){[class^="few-"],[class*=" few-"],[class^="few-"]::before,[class^="few-"]::after{transition-duration:0s!important;animation-duration:0s!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}

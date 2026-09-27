@@ -1,0 +1,7 @@
+.few-tooltip{inset:auto;margin:0;font-family:var(--few-font);color:var(--few-canvas);font-size:12px;line-height:1.4;background:var(--few-ink);border-radius:var(--few-radius);padding:6px 10px;max-width:240px;box-shadow:var(--few-shadow);pointer-events:none}
+.few-tooltip-arrow{position:absolute;width:8px;height:8px;background:var(--few-ink);transform:rotate(45deg)}
+.few-tooltip-arrow[data-side="top"]{bottom:-4px}
+.few-tooltip-arrow[data-side="bottom"]{top:-4px}
+.few-tooltip-arrow[data-side="left"]{right:-4px}
+.few-tooltip-arrow[data-side="right"]{left:-4px}
+.few-tooltip-trigger:focus-visible{outline:var(--few-ring);outline-offset:var(--few-ring-offset)}

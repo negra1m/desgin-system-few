@@ -1,0 +1,14 @@
+.few-icon-button{font-family:var(--few-font);display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent;cursor:pointer;background:var(--few-brand);color:var(--few-on-brand);transition:background var(--few-fast),transform var(--few-fast),filter var(--few-fast)}
+.few-icon-button:hover:not(:disabled){filter:brightness(.93)}
+.few-icon-button:active:not(:disabled){transform:translateY(1px)}
+.few-icon-button:disabled{opacity:.5;cursor:not-allowed}
+.few-icon-button--secondary{background:var(--few-surface);color:var(--few-ink);border-color:var(--few-line)}
+.few-icon-button--ghost{background:transparent;color:var(--few-ink)}
+.few-icon-button--danger{background:var(--few-danger);color:var(--few-canvas)}
+.few-icon-button--link{background:transparent;color:var(--few-brand)}
+.few-icon-button--sm{width:34px;height:34px}
+.few-icon-button--md{width:42px;height:42px}
+.few-icon-button--lg{width:48px;height:48px}
+.few-icon-button--round{border-radius:999px}
+.few-icon-button--square{border-radius:var(--few-radius)}
+.few-icon-button:focus-visible{outline:var(--few-ring);outline-offset:var(--few-ring-offset)}

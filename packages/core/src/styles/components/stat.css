@@ -1,0 +1,15 @@
+.few-stat{font-family:var(--few-font);color:var(--few-ink);font-size:14px;line-height:1.5;background:var(--few-surface);border:1px solid var(--few-line);border-radius:var(--few-radius);padding:20px;display:flex;flex-direction:column;gap:6px}
+.few-stat-label{margin:0}
+.few-stat-value{margin:0;font-size:32px;font-weight:600;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1.15}
+.few-stat-change{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;width:fit-content;color:var(--few-muted)}
+.few-stat-change[data-tone="success"]{color:var(--few-success)}
+.few-stat-change[data-tone="danger"]{color:var(--few-danger)}
+.few-stat-change[data-tone="warning"]{color:var(--few-warning)}
+.few-stat-change[data-tone="info"]{color:var(--few-info)}
+.few-stat-change-icon{font-size:11px}
+.few-stat-description{margin:0}
+.few-stat-icon{display:inline-flex;color:var(--few-muted)}
+.few-stat[data-tone="success"] .few-stat-icon{color:var(--few-success)}
+.few-stat[data-tone="danger"] .few-stat-icon{color:var(--few-danger)}
+.few-stat[data-tone="warning"] .few-stat-icon{color:var(--few-warning)}
+.few-stat[data-tone="info"] .few-stat-icon{color:var(--few-info)}

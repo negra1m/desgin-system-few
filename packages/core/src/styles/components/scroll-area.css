@@ -1,0 +1,15 @@
+.few-scroll-area{position:relative;overflow:hidden}
+.few-scroll-area-viewport{width:100%;height:100%;overflow:auto;scrollbar-width:thin;scrollbar-color:var(--few-line) transparent}
+.few-scroll-area-viewport::-webkit-scrollbar{width:10px;height:10px}
+.few-scroll-area-viewport::-webkit-scrollbar-track{background:transparent}
+.few-scroll-area-viewport::-webkit-scrollbar-thumb{background:var(--few-line);border-radius:999px}
+.few-scroll-area-viewport::-webkit-scrollbar-thumb:hover{background:var(--few-muted)}
+.few-scroll-area-viewport:focus-visible{outline:var(--few-ring);outline-offset:-2px}
+.few-scroll-area[data-type="hover"] .few-scroll-area-viewport{scrollbar-color:transparent transparent}
+.few-scroll-area[data-type="hover"] .few-scroll-area-viewport:hover,.few-scroll-area[data-type="hover"] .few-scroll-area-viewport:focus-within{scrollbar-color:var(--few-line) transparent}
+.few-scroll-area[data-type="hover"] .few-scroll-area-viewport::-webkit-scrollbar-thumb{background:transparent}
+.few-scroll-area[data-type="hover"] .few-scroll-area-viewport:hover::-webkit-scrollbar-thumb,.few-scroll-area[data-type="hover"] .few-scroll-area-viewport:focus-within::-webkit-scrollbar-thumb{background:var(--few-line)}
+.few-scroll-area-viewport[data-overflow-top]{box-shadow:inset 0 8px 6px -6px rgba(0,0,0,.3)}
+.few-scroll-area-viewport[data-overflow-bottom]{box-shadow:inset 0 -8px 6px -6px rgba(0,0,0,.3)}
+.few-scroll-area-viewport[data-overflow-top][data-overflow-bottom]{box-shadow:inset 0 8px 6px -6px rgba(0,0,0,.3),inset 0 -8px 6px -6px rgba(0,0,0,.3)}
+@media(prefers-reduced-motion:reduce){.few-scroll-area-viewport{scroll-behavior:auto}}

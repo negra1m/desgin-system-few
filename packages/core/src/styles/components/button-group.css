@@ -1,0 +1,17 @@
+.few-button-group{display:inline-flex;gap:8px}
+.few-button-group[data-orientation="vertical"]{flex-direction:column}
+.few-button-group[data-attached]{gap:0}
+.few-button-group[data-attached] .few-button,.few-button-group[data-attached] .few-icon-button{border-radius:0}
+.few-button-group[data-attached][data-orientation="horizontal"] > .few-button:not(:first-child),
+.few-button-group[data-attached][data-orientation="horizontal"] > .few-icon-button:not(:first-child){margin-left:-1px}
+.few-button-group[data-attached][data-orientation="horizontal"] > .few-button:first-child,
+.few-button-group[data-attached][data-orientation="horizontal"] > .few-icon-button:first-child{border-top-left-radius:var(--few-radius);border-bottom-left-radius:var(--few-radius)}
+.few-button-group[data-attached][data-orientation="horizontal"] > .few-button:last-child,
+.few-button-group[data-attached][data-orientation="horizontal"] > .few-icon-button:last-child{border-top-right-radius:var(--few-radius);border-bottom-right-radius:var(--few-radius)}
+.few-button-group[data-attached][data-orientation="vertical"] > .few-button:not(:first-child),
+.few-button-group[data-attached][data-orientation="vertical"] > .few-icon-button:not(:first-child){margin-top:-1px}
+.few-button-group[data-attached][data-orientation="vertical"] > .few-button:first-child,
+.few-button-group[data-attached][data-orientation="vertical"] > .few-icon-button:first-child{border-top-left-radius:var(--few-radius);border-top-right-radius:var(--few-radius)}
+.few-button-group[data-attached][data-orientation="vertical"] > .few-button:last-child,
+.few-button-group[data-attached][data-orientation="vertical"] > .few-icon-button:last-child{border-bottom-left-radius:var(--few-radius);border-bottom-right-radius:var(--few-radius)}
+.few-button-group .few-button:focus-visible,.few-button-group .few-icon-button:focus-visible{position:relative;z-index:1}

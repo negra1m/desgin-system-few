@@ -1,0 +1,13 @@
+.few-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--few-font);font-weight:600;line-height:1.4;border-radius:999px;width:fit-content;color:var(--few-muted);border:1px solid transparent}
+.few-badge:focus-visible{outline:var(--few-ring);outline-offset:var(--few-ring-offset)}
+.few-badge--soft{background:color-mix(in srgb,currentColor 12%,var(--few-surface))}
+.few-badge--outline{background:transparent;border-color:currentColor}
+.few-badge--solid{border-color:transparent;color:var(--few-on-brand)}
+.few-badge--solid[data-tone="neutral"]{background:var(--few-muted)}
+.few-badge--solid[data-tone="success"]{background:var(--few-success)}
+.few-badge--solid[data-tone="warning"]{background:var(--few-warning)}
+.few-badge--solid[data-tone="danger"]{background:var(--few-danger)}
+.few-badge--solid[data-tone="info"]{background:var(--few-info)}
+.few-badge--sm{font-size:10px;padding:3px 8px}
+.few-badge--md{font-size:11px;padding:4px 10px}
+.few-badge .few-dot{width:5px;height:5px;border-radius:50%;background:currentColor;flex-shrink:0}

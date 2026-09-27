@@ -1,0 +1,13 @@
+.few-command{font-family:var(--few-font);color:var(--few-ink);font-size:14px;padding:0;border:1px solid var(--few-line);border-radius:var(--few-radius-lg);box-shadow:var(--few-shadow);width:min(560px,90vw);max-width:560px;background:var(--few-surface)}
+.few-command::backdrop{background:var(--few-overlay)}
+.few-command-input{font:inherit;width:100%;box-sizing:border-box;border:0;border-bottom:1px solid var(--few-line);background:transparent;color:var(--few-ink);padding:16px;outline:none}
+.few-command-input::placeholder{color:var(--few-muted)}
+.few-command-list{max-height:320px;overflow:auto;padding:8px}
+.few-command-group{display:flex;flex-direction:column;gap:2px;padding:4px 0}
+.few-command-group-heading{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--few-muted);padding:6px 10px}
+.few-command-item{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:var(--few-radius);color:var(--few-ink);cursor:pointer}
+.few-command-item[data-state="active"]{background:var(--few-soft)}
+.few-command-item[data-disabled]{opacity:.5;cursor:not-allowed}
+.few-command-empty{padding:24px 10px;text-align:center;color:var(--few-muted)}
+.few-command-separator{height:1px;background:var(--few-line);margin:6px 0}
+.few-command-shortcut{margin-left:auto;font:11px var(--few-mono);color:var(--few-muted);border:1px solid var(--few-line);border-radius:4px;padding:1px 6px}

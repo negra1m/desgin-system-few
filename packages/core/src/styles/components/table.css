@@ -1,0 +1,18 @@
+.few-table-root{font-family:var(--few-font);color:var(--few-ink);font-size:14px;line-height:1.5;max-width:100%;overflow:auto;border:1px solid var(--few-line);border-radius:var(--few-radius);background:var(--few-surface)}
+.few-table-root:focus-visible{outline:var(--few-ring);outline-offset:var(--few-ring-offset)}
+.few-table{width:100%;border-collapse:collapse;text-align:left;white-space:nowrap}
+.few-table-caption{text-align:left;padding:16px 20px;font-weight:600;caption-side:top}
+.few-table-head{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--few-muted);background:var(--few-soft);font-weight:500;padding:0}
+.few-table-head,.few-table-cell{padding:13px 20px;border-bottom:1px solid var(--few-line)}
+.few-table[data-density="compact"] .few-table-head,.few-table[data-density="compact"] .few-table-cell{padding:7px 14px}
+.few-table-body .few-table-row:last-child .few-table-cell{border-bottom:0}
+.few-table--striped .few-table-body .few-table-row:nth-child(even){background:color-mix(in srgb,var(--few-ink) 3%,transparent)}
+.few-table-row[data-state="selected"]{background:color-mix(in srgb,var(--few-brand) 12%,transparent)}
+.few-table-head[data-numeric],.few-table-cell[data-numeric]{text-align:right;font-variant-numeric:tabular-nums}
+.few-table[data-sticky-header] .few-table-head{position:sticky;top:0;z-index:1}
+.few-table-sort{font:inherit;display:inline-flex;align-items:center;gap:6px;border:0;background:transparent;color:inherit;text-transform:inherit;letter-spacing:inherit;padding:13px 20px;margin:-13px -20px;cursor:pointer}
+.few-table-sort:focus-visible{outline:var(--few-ring);outline-offset:var(--few-ring-offset);border-radius:var(--few-radius)}
+.few-table-sort-icon{width:8px;height:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);opacity:.5;transition:transform var(--few-fast),opacity var(--few-fast)}
+.few-table-sort[data-direction="ascending"] .few-table-sort-icon{transform:rotate(-135deg);opacity:1}
+.few-table-sort[data-direction="descending"] .few-table-sort-icon{transform:rotate(45deg);opacity:1}
+.few-table-empty-cell{padding:32px 20px;text-align:center;color:var(--few-muted)}

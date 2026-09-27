@@ -1,0 +1,9 @@
+.few-empty{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:32px 24px;font-family:var(--few-font);color:var(--few-ink)}
+.few-empty--sm{padding:20px 16px}
+.few-empty--lg{padding:48px 32px}
+.few-empty-icon{width:52px;height:52px;display:grid;place-items:center;border-radius:50%;background:var(--few-soft);font-size:26px;margin-bottom:8px;font-style:normal}
+.few-empty--sm .few-empty-icon{width:40px;height:40px;font-size:20px}
+.few-empty--lg .few-empty-icon{width:64px;height:64px;font-size:32px}
+.few-empty-title{margin:0;font-size:16px;font-weight:600}
+.few-empty-description{margin:0;max-width:360px}
+.few-empty-actions{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
