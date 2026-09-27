@@ -245,10 +245,10 @@ h2 { font-size: 24px; letter-spacing: -.8px; font-weight: 500; line-height: 1.4;
 @media (max-width: 950px) {
   .hero { grid-template-columns: 1fr; padding-top: 35px; padding-bottom: 25px; }
   .hero h1 { font-size: 60px; }
-  .hero-visual { height: 325px; width: 100%; max-width: 470px; margin: 0 auto; }
-  .visual-core { top: 17%; }
-  .panel-component { top: 7%; left: 3%; }
-  .panel-palette { bottom: 14%; right: 0; }
+  .hero-visual { order: -1; height: 370px; width: 100%; max-width: 470px; margin: 0 auto 28px; }
+  .visual-core { top: 6%; }
+  .panel-component { top: 5%; left: 3%; }
+  .panel-palette { bottom: 4%; right: 0; }
   .visual-coordinate { top: 10px; }
   .visual-orbits { width: 85%; height: 120%; left: 7.5%; top: -10%; }
   .stats-strip { grid-template-columns: repeat(3, 1fr); }
@@ -288,10 +288,10 @@ h2 { font-size: 24px; letter-spacing: -.8px; font-weight: 500; line-height: 1.4;
   .hero-actions { gap: 17px; }
   .hero-actions .few-button { font-size: 10px; padding: 13px; gap: 12px; }
   .hero-actions .text-link { font-size: 10px; }
-  .hero-visual { height: 312px; margin-top: 7px; }
-  .visual-core { scale: .73; top: 16%; }
-  .panel-component { left: -7%; top: 7%; scale: .76; }
-  .panel-palette { right: -8%; bottom: 8%; scale: .76; }
+  .hero-visual { height: 350px; margin-top: 7px; }
+  .visual-core { scale: .7; top: 4%; }
+  .panel-component { left: -7%; top: 5%; scale: .76; }
+  .panel-palette { right: -6%; bottom: 3%; scale: .76; }
   .visual-coordinate { font-size: 6px; }
   .visual-bottom { bottom: 0; font-size: 7px; }
   .visual-bottom button { min-width: 32px; justify-content: center; }

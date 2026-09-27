@@ -1,0 +1,3 @@
+.few-aspect-ratio{overflow:hidden;border-radius:var(--few-radius)}
+.few-aspect-ratio-content{overflow:hidden}
+.few-aspect-ratio-content>img,.few-aspect-ratio-content>video{width:100%;height:100%;object-fit:cover}

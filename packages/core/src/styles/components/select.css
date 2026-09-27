@@ -1,0 +1,21 @@
+.few-select{position:relative;display:inline-flex;flex-direction:column;gap:6px;font-family:var(--few-font);color:var(--few-ink);font-size:14px}
+.few-select-trigger{display:inline-flex;align-items:center;justify-content:space-between;gap:8px;min-width:200px;padding:10px 14px;background:var(--few-surface);border:1px solid var(--few-line);border-radius:var(--few-radius);color:var(--few-ink);font:inherit;cursor:pointer;transition:border-color var(--few-fast)}
+.few-select-trigger:hover:not([data-disabled]){border-color:var(--few-brand)}
+.few-select-trigger[data-state="open"]{border-color:var(--few-brand)}
+.few-select-trigger[data-disabled]{opacity:.5;cursor:not-allowed}
+.few-select-trigger:focus-visible{outline:var(--few-ring);outline-offset:var(--few-ring-offset)}
+.few-select-value{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;flex:1}
+.few-select-value[data-placeholder]{color:var(--few-muted)}
+.few-select-icon{color:var(--few-muted);font-size:11px;transition:transform var(--few-fast)}
+.few-select-trigger[data-state="open"] .few-select-icon{transform:rotate(180deg)}
+.few-select-content{margin:0;padding:6px;border:1px solid var(--few-line);border-radius:var(--few-radius);background:var(--few-surface);box-shadow:var(--few-shadow);max-height:280px;overflow:auto;z-index:1}
+.few-select-viewport{display:flex;flex-direction:column;gap:2px}
+.few-select-group+.few-select-group{margin-top:6px}
+.few-select-label{padding:6px 10px 2px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--few-muted)}
+.few-select-item{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:9px 10px;border-radius:var(--few-radius);cursor:pointer;color:var(--few-ink)}
+.few-select-item[data-highlighted]{background:var(--few-soft)}
+.few-select-item:focus-visible{outline:var(--few-ring);outline-offset:-2px}
+.few-select-item[data-disabled]{opacity:.5;cursor:not-allowed}
+.few-select-item[data-state="checked"]{color:var(--few-brand)}
+.few-select-item-indicator{font-size:12px;color:var(--few-brand)}
+.few-select-separator{height:1px;margin:6px 4px;background:var(--few-line)}

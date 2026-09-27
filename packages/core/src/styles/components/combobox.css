@@ -1,0 +1,14 @@
+.few-combobox{position:relative;display:inline-flex;flex-direction:column;gap:6px;width:100%;max-width:320px;font-family:var(--few-font);color:var(--few-ink);font-size:14px}
+.few-combobox-input{width:100%;padding:10px 36px 10px 14px;background:var(--few-surface);border:1px solid var(--few-line);border-radius:var(--few-radius);color:var(--few-ink);font:inherit}
+.few-combobox-input:focus-visible{outline:var(--few-ring);outline-offset:var(--few-ring-offset)}
+.few-combobox-input[data-state="open"]{border-color:var(--few-brand)}
+.few-combobox-trigger{position:absolute;right:6px;top:50%;transform:translateY(-50%);border:0;background:transparent;color:var(--few-muted);cursor:pointer;padding:4px;font-size:11px}
+.few-combobox-content{margin:0;padding:6px;border:1px solid var(--few-line);border-radius:var(--few-radius);background:var(--few-surface);box-shadow:var(--few-shadow);max-height:260px;overflow:auto;display:flex;flex-direction:column;gap:2px;z-index:1}
+.few-combobox-item{padding:9px 10px;border-radius:var(--few-radius);cursor:pointer;color:var(--few-ink);display:flex;align-items:center;justify-content:space-between;gap:8px}
+.few-combobox-item[data-highlighted]{background:var(--few-soft)}
+.few-combobox-item[data-disabled]{opacity:.5;cursor:not-allowed}
+.few-combobox-item[data-state="checked"]{color:var(--few-brand)}
+.few-combobox-item-indicator{font-size:12px;color:var(--few-brand)}
+.few-combobox-empty{padding:14px 10px;text-align:center;color:var(--few-muted);font-size:13px}
+.few-combobox-group+.few-combobox-group{margin-top:6px}
+.few-combobox-label{padding:6px 10px 2px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--few-muted)}

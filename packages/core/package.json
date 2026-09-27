@@ -1,0 +1,15 @@
+{
+  "name": "@fewcompany/core",
+  "version": "1.0.0",
+  "description": "Tokens, CSS e lógica headless (sem framework) do design system da Few Company.",
+  "type": "module",
+  "license": "UNLICENSED",
+  "repository": {"type":"git","url":"https://github.com/negra1m/desgin-system-few.git","directory":"packages/core"},
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {".": {"types":"./dist/index.d.ts","import":"./dist/index.js"}, "./styles.css":"./dist/styles.css", "./tokens":"./dist/tokens.js"},
+  "files": ["dist", "README.md"],
+  "sideEffects": ["**/*.css"],
+  "scripts": {"build":"tsc -p tsconfig.json && node scripts/build-css.mjs", "typecheck":"tsc -p tsconfig.json --noEmit", "prepack":"npm run build"},
+  "publishConfig": {"access":"restricted"}
+}

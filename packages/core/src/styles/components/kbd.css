@@ -1,0 +1,5 @@
+.few-kbd{display:inline-flex;align-items:center;gap:.25em;font-family:var(--few-mono);color:var(--few-ink);background:var(--few-surface);border:1px solid var(--few-line);border-bottom-width:2px;border-radius:var(--few-radius);padding:.15em .5em;line-height:1.4;white-space:nowrap}
+.few-kbd[data-size="sm"]{font-size:11px;padding:.1em .4em}
+.few-kbd[data-size="md"]{font-size:13px;padding:.15em .5em}
+.few-kbd-key{display:inline-flex;align-items:center;gap:.25em}
+.few-kbd-sep{color:var(--few-muted);font-size:.9em}

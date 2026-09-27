@@ -1,0 +1,9 @@
+.few-link{font-family:var(--few-font);color:var(--few-ink);text-decoration:none;display:inline-flex;align-items:baseline;gap:2px;cursor:pointer}
+.few-link--default{color:var(--few-ink)}
+.few-link--muted{color:var(--few-muted)}
+.few-link--brand{color:var(--few-brand)}
+.few-link--underline-always{text-decoration:underline;text-underline-offset:3px}
+.few-link--underline-hover:hover{text-decoration:underline;text-underline-offset:3px}
+.few-link--underline-none{text-decoration:none}
+.few-link:focus-visible{outline:var(--few-ring);outline-offset:var(--few-ring-offset);border-radius:2px}
+.few-link-icon{font-size:.85em}

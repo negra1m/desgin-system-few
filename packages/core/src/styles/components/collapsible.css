@@ -1,0 +1,4 @@
+.few-collapsible{font-family:var(--few-font);color:var(--few-ink);font-size:14px;line-height:1.5}
+.few-collapsible-trigger{font:inherit}
+.few-collapsible-content{overflow:hidden;margin-top:10px}
+.few-collapsible-content[hidden]{display:none}

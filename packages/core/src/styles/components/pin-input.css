@@ -1,0 +1,3 @@
+.few-pin-input{display:flex;gap:8px}
+.few-pin-input[data-disabled]{opacity:.5}
+.few-pin-input-field{width:44px;min-height:44px;padding:0;text-align:center;font-size:18px;font-weight:600}

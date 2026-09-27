@@ -1,0 +1,4 @@
+.few-avatar-group{display:flex;align-items:center}
+.few-avatar-group .few-avatar,.few-avatar-group .few-avatar-group-overflow{margin-left:var(--few-avatar-group-spacing, -10px);border:2px solid var(--few-surface)}
+.few-avatar-group .few-avatar:first-child{margin-left:0}
+.few-avatar-group-overflow{font-size:11px;color:var(--few-muted);background:var(--few-soft)}

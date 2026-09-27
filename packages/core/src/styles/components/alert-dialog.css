@@ -1,0 +1,9 @@
+.few-alert-dialog{font-family:var(--few-font);color:var(--few-ink);font-size:14px;line-height:1.5;background:var(--few-surface);border:1px solid var(--few-line);border-radius:var(--few-radius-lg);box-shadow:var(--few-shadow);padding:28px;width:min(420px,calc(100% - 32px));margin:auto;transition:opacity var(--few-normal),transform var(--few-normal)}
+.few-alert-dialog::backdrop{background:var(--few-overlay);backdrop-filter:blur(4px)}
+@starting-style{.few-alert-dialog[open]{opacity:0;transform:translateY(12px) scale(.98)}}
+.few-alert-dialog-title{font-size:19px;font-weight:600;margin:0 0 8px}
+.few-alert-dialog-description{margin:0 0 24px}
+.few-alert-dialog-cancel,.few-alert-dialog-action{font:inherit;min-height:40px;padding:9px 18px;border-radius:var(--few-radius);cursor:pointer;font-weight:600;border:1px solid var(--few-line);background:var(--few-surface);color:var(--few-ink)}
+.few-alert-dialog-cancel{margin-right:10px}
+.few-alert-dialog-action{background:var(--few-brand);color:var(--few-on-brand);border-color:transparent}
+.few-alert-dialog-cancel:focus-visible,.few-alert-dialog-action:focus-visible,.few-alert-dialog:focus-visible{outline:var(--few-ring);outline-offset:var(--few-ring-offset)}

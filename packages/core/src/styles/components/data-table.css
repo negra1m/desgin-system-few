@@ -1,0 +1,3 @@
+/* DataTable reaproveita as classes few-table-*; aqui só o ajuste da coluna de seleção. */
+.few-table-head:has(> input[type="checkbox"]),.few-table-cell:has(> input[type="checkbox"]){width:1%;text-align:center}
+.few-table-head input[type="checkbox"],.few-table-cell input[type="checkbox"]{accent-color:var(--few-brand);width:16px;height:16px;vertical-align:middle}

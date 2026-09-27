@@ -1,0 +1,12 @@
+.few-progress-circle{position:relative;display:inline-grid;place-items:center;font-family:var(--few-font);color:var(--few-ink)}
+.few-progress-circle-svg{display:block}
+.few-progress-circle-track{stroke:var(--few-line)}
+.few-progress-circle-indicator{stroke:var(--few-brand);transition:stroke-dasharray var(--few-normal)}
+.few-progress-circle[data-tone="success"] .few-progress-circle-indicator{stroke:var(--few-success)}
+.few-progress-circle[data-tone="warning"] .few-progress-circle-indicator{stroke:var(--few-warning)}
+.few-progress-circle[data-tone="danger"] .few-progress-circle-indicator{stroke:var(--few-danger)}
+.few-progress-circle[data-tone="info"] .few-progress-circle-indicator{stroke:var(--few-info)}
+.few-progress-circle[data-tone="neutral"] .few-progress-circle-indicator{stroke:var(--few-muted)}
+.few-progress-circle-svg[data-state="indeterminate"]{animation:few-spin 1s linear infinite;transform-origin:center}
+.few-progress-circle-label{position:absolute;font-size:12px;font-weight:600;font-variant-numeric:tabular-nums}
+@media(prefers-reduced-motion:reduce){.few-progress-circle-indicator{transition:none}.few-progress-circle-svg[data-state="indeterminate"]{animation:none}}

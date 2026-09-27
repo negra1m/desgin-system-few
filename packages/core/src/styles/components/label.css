@@ -1,0 +1,2 @@
+.few-form-label{font-family:var(--few-font);color:var(--few-ink);font-size:12px;font-weight:600;line-height:1.5;display:inline-flex;align-items:center;gap:2px;cursor:default}
+.few-form-label-required{color:var(--few-danger)}

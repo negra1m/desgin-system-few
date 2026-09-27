@@ -1,0 +1,9 @@
+.few-native-select{font-family:var(--few-font);color:var(--few-ink);font-size:14px;line-height:1.5;position:relative;display:inline-block;width:100%}
+.few-native-select-control{font:inherit;width:100%;box-sizing:border-box;appearance:none;border:1px solid var(--few-line);background:var(--few-surface);color:var(--few-ink);padding:11px 38px 11px 12px;border-radius:var(--few-radius);min-height:44px}
+.few-native-select-control:hover:not(:disabled){border-color:color-mix(in srgb,var(--few-line) 60%,var(--few-ink))}
+.few-native-select-control:focus-visible{outline:var(--few-ring);outline-offset:var(--few-ring-offset)}
+.few-native-select-control[aria-invalid="true"]{border-color:var(--few-danger)}
+.few-native-select-control:disabled{opacity:.5;cursor:not-allowed}
+.few-native-select-chevron{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:14px;height:14px;color:var(--few-muted);pointer-events:none}
+.few-native-select--sm .few-native-select-control{min-height:34px;padding:7px 32px 7px 10px;font-size:13px}
+.few-native-select--lg .few-native-select-control{min-height:50px;padding:13px 40px 13px 14px}

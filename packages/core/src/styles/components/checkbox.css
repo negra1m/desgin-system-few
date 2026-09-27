@@ -1,0 +1,5 @@
+.few-checkbox{font-family:var(--few-font);color:var(--few-ink);font-size:14px;line-height:1.5;display:inline-flex;align-items:center;gap:10px;cursor:pointer;min-height:32px}
+.few-checkbox[data-disabled]{opacity:.5;cursor:not-allowed}
+.few-checkbox-indicator{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;flex-shrink:0;border:1px solid var(--few-line);border-radius:5px;background:var(--few-surface);color:var(--few-on-brand);transition:background var(--few-fast),border-color var(--few-fast)}
+.few-checkbox-indicator[data-state="checked"],.few-checkbox-indicator[data-state="indeterminate"]{background:var(--few-brand);border-color:var(--few-brand)}
+.few-checkbox:has(input:focus-visible) .few-checkbox-indicator{outline:var(--few-ring);outline-offset:var(--few-ring-offset)}
