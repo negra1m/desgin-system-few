@@ -38,7 +38,9 @@ export const DemoSeparator = defineComponent({
 export const DemoAspectRatio = defineComponent({
   name: 'DemoAspectRatio',
   setup() {
-    return () => h(FewAspectRatio, { ratio: 16 / 9 }, () => h('img', { src: '/placeholder.png', alt: 'Prévia do painel' }));
+    return () => h('div', { class: 'demo-narrow' }, h(FewAspectRatio, { ratio: 16 / 9 }, () => h('div', {
+      style: { width: '100%', height: '100%', display: 'grid', placeItems: 'center', background: 'var(--few-soft)', color: 'var(--few-muted)' },
+    }, 'Área 16:9 reservada')));
   },
 });
 

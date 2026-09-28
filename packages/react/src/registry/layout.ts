@@ -9,6 +9,7 @@ export const layoutRegistry: ComponentRecord[] = [
     origins: ['Caraminholas · .card', 'iFIGHT · ui/card.tsx'],
     references: ['shadcn/ui Card', 'MUI Card'],
     code: '<Card variant="outlined"><Card.Header><Card.Title>Título</Card.Title><Card.Description>Descrição</Card.Description><Card.Action><button>⋮</button></Card.Action></Card.Header><Card.Content>Conteúdo</Card.Content><Card.Footer>Rodapé</Card.Footer></Card>',
+    vueCode: '<FewCard variant="outlined">\n  <FewCardHeaderPart>\n    <FewCardTitle>Título</FewCardTitle>\n    <FewCardDescription>Descrição</FewCardDescription>\n    <FewCardAction><button>⋮</button></FewCardAction>\n  </FewCardHeaderPart>\n  <FewCardContent>Conteúdo</FewCardContent>\n  <FewCardFooter>Rodapé</FewCardFooter>\n</FewCard>',
   }),
   component({
     id: 'separator', name: 'Separator', category: 'Estrutura',
@@ -18,6 +19,7 @@ export const layoutRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix Separator'],
     code: '<Separator orientation="horizontal" /><Separator label="ou" />',
+    vueCode: '<FewSeparator orientation="horizontal" />\n<FewSeparator>\n  <template #label>ou</template>\n</FewSeparator>',
   }),
   component({
     id: 'aspect-ratio', name: 'AspectRatio', category: 'Estrutura',
@@ -27,6 +29,7 @@ export const layoutRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix AspectRatio'],
     code: '<AspectRatio ratio={16 / 9}><img src="/foto.jpg" alt="" /></AspectRatio>',
+    vueCode: '<FewAspectRatio :ratio="16 / 9">\n  <img src="/foto.jpg" alt="" />\n</FewAspectRatio>',
   }),
   component({
     id: 'scroll-area', name: 'ScrollArea', category: 'Estrutura',
@@ -36,6 +39,7 @@ export const layoutRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix ScrollArea'],
     code: '<ScrollArea type="hover"><ScrollArea.Viewport label="Lista de itens">Conteúdo longo…</ScrollArea.Viewport></ScrollArea>',
+    vueCode: '<FewScrollArea type="hover">\n  <FewScrollAreaViewport label="Lista de itens">Conteúdo longo…</FewScrollAreaViewport>\n</FewScrollArea>',
   }),
   component({
     id: 'stack', name: 'Stack', category: 'Estrutura',
@@ -45,6 +49,7 @@ export const layoutRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['MUI Stack', 'Chakra Stack'],
     code: '<Stack direction={{ base: "column", md: "row" }} gap={4} align="center">…</Stack>',
+    vueCode: '<FewStack :direction="{ base: \'column\', md: \'row\' }" :gap="4" align="center">\n  …\n</FewStack>',
   }),
   component({
     id: 'grid', name: 'Grid', category: 'Estrutura',
@@ -54,6 +59,7 @@ export const layoutRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['MUI Grid', 'Chakra Grid'],
     code: '<Grid columns="auto" minChildWidth="220px" gap={4}><Grid.Item colSpan={2}>Item</Grid.Item></Grid>',
+    vueCode: '<FewGrid columns="auto" min-child-width="220px" :gap="4">\n  <FewGridItem :col-span="2">Item</FewGridItem>\n</FewGrid>',
   }),
   component({
     id: 'toolbar', name: 'Toolbar', category: 'Estrutura',
@@ -63,6 +69,7 @@ export const layoutRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix Toolbar'],
     code: '<Toolbar label="Formatação"><Toolbar.Group><Toolbar.Button>Negrito</Toolbar.Button><Toolbar.Button>Itálico</Toolbar.Button></Toolbar.Group><Toolbar.Separator /><Toolbar.Link href="#">Ajuda</Toolbar.Link></Toolbar>',
+    vueCode: '<FewToolbar label="Formatação">\n  <FewToolbarGroup>\n    <FewToolbarButton>Negrito</FewToolbarButton>\n    <FewToolbarButton>Itálico</FewToolbarButton>\n  </FewToolbarGroup>\n  <FewToolbarSeparator />\n  <FewToolbarLink href="#">Ajuda</FewToolbarLink>\n</FewToolbar>',
   }),
   component({
     id: 'app-shell', name: 'AppShell', category: 'Estrutura',
@@ -72,5 +79,6 @@ export const layoutRegistry: ComponentRecord[] = [
     origins: ['Catálogo Few · shell com sidebar'],
     references: ['Mantine AppShell', 'Radix (popover/dismiss para o off-canvas)'],
     code: '<AppShell><AppShell.Header><AppShell.SidebarTrigger>☰</AppShell.SidebarTrigger></AppShell.Header><AppShell.Sidebar>Menu</AppShell.Sidebar><AppShell.Main id="main-content">Conteúdo</AppShell.Main><AppShell.Footer>Rodapé</AppShell.Footer></AppShell>',
+    vueCode: '<FewAppShell>\n  <FewAppShellHeader>\n    <FewAppShellSidebarTrigger>☰</FewAppShellSidebarTrigger>\n  </FewAppShellHeader>\n  <FewAppShellSidebar>Menu</FewAppShellSidebar>\n  <FewAppShellMain id="main-content">Conteúdo</FewAppShellMain>\n  <FewAppShellFooter>Rodapé</FewAppShellFooter>\n</FewAppShell>',
   }),
 ];

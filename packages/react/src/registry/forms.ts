@@ -9,6 +9,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix Form', 'MUI Form'],
     code: '<Form onSubmit={(e, values) => console.log(values)}>\n  <Field>…</Field>\n  <Form.Submit>Enviar</Form.Submit>\n</Form>',
+    vueCode: `<FewForm @submit="(e, values) => console.log(values)">\n  <Field>…</Field>\n  <FewFormSubmit>Enviar</FewFormSubmit>\n</FewForm>`,
   }),
   component({
     id: 'fieldset', name: 'Fieldset', category: 'Formulários',
@@ -18,6 +19,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['HTML fieldset/legend', 'PrimeReact Fieldset'],
     code: '<Fieldset>\n  <Fieldset.Legend>Endereço</Fieldset.Legend>\n  <Field>…</Field>\n</Fieldset>',
+    vueCode: `<FewFieldset>\n  <FewFieldsetLegend>Endereço</FewFieldsetLegend>\n  <Field>…</Field>\n</FewFieldset>`,
   }),
   component({
     id: 'field', name: 'Field', category: 'Formulários',
@@ -27,6 +29,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Caraminholas · .field'],
     references: ['Radix Form.Field', 'MUI FormControl', 'PrimeReact FloatLabel'],
     code: '<Field invalid={!!error}>\n  <Field.Label>E-mail</Field.Label>\n  <Field.Control><Input type="email" /></Field.Control>\n  <Field.Error>{error}</Field.Error>\n</Field>',
+    vueCode: `<FewField :invalid="!!error">\n  <FewFieldLabel>E-mail</FewFieldLabel>\n  <FewFieldControl><FewInput type="email" /></FewFieldControl>\n  <FewFieldError>{{ error }}</FewFieldError>\n</FewField>`,
   }),
   component({
     id: 'label', name: 'Label', category: 'Formulários',
@@ -36,6 +39,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix Label'],
     code: '<Label htmlFor="nome" required>Nome</Label>',
+    vueCode: `<FewLabel for="nome" required>Nome</FewLabel>`,
   }),
   component({
     id: 'input', name: 'Input', category: 'Formulários',
@@ -45,6 +49,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Caraminholas · .field'],
     references: ['MUI TextField', 'PrimeReact InputText'],
     code: '<Input placeholder="Seu nome" />',
+    vueCode: `<FewInput placeholder="Seu nome" />`,
   }),
   component({
     id: 'input-group', name: 'InputGroup', category: 'Formulários',
@@ -54,6 +59,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['MUI InputAdornment', 'Mantine Input.Section'],
     code: '<InputGroup>\n  <InputGroup.Addon>R$</InputGroup.Addon>\n  <InputGroup.Input placeholder="0,00" />\n</InputGroup>',
+    vueCode: `<FewInputGroup>\n  <FewInputGroupAddon>R$</FewInputGroupAddon>\n  <FewInputGroupInput placeholder="0,00" />\n</FewInputGroup>`,
   }),
   component({
     id: 'textarea', name: 'Textarea', category: 'Formulários',
@@ -63,6 +69,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Caraminholas · FormRow'],
     references: ['MUI TextField multiline', 'PrimeReact Textarea'],
     code: '<Textarea placeholder="Conte mais…" autoResize />',
+    vueCode: `<FewTextarea placeholder="Conte mais…" auto-resize />`,
   }),
   component({
     id: 'number-input', name: 'NumberInput', category: 'Formulários',
@@ -72,6 +79,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix NumberField (Ark UI)', 'PrimeReact InputNumber'],
     code: '<NumberInput defaultValue={1} min={0} max={10}>\n  <NumberInput.Decrement>−</NumberInput.Decrement>\n  <NumberInput.Input />\n  <NumberInput.Increment>+</NumberInput.Increment>\n</NumberInput>',
+    vueCode: `<FewNumberInput :default-value="1" :min="0" :max="10">\n  <FewNumberInputDecrement>−</FewNumberInputDecrement>\n  <FewNumberInputInput />\n  <FewNumberInputIncrement>+</FewNumberInputIncrement>\n</FewNumberInput>`,
   }),
   component({
     id: 'password-input', name: 'PasswordInput', category: 'Formulários',
@@ -81,6 +89,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['PrimeReact Password', 'Mantine PasswordInput'],
     code: '<PasswordInput>\n  <PasswordInput.Input placeholder="Senha" />\n  <PasswordInput.Toggle />\n</PasswordInput>',
+    vueCode: `<FewPasswordInput>\n  <FewPasswordInputInput placeholder="Senha" />\n  <FewPasswordInputToggle />\n</FewPasswordInput>`,
   }),
   component({
     id: 'pin-input', name: 'PinInput', category: 'Formulários',
@@ -90,6 +99,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Chakra PinInput', 'Ark UI PinInput'],
     code: '<PinInput length={4} onComplete={console.log}>\n  {Array.from({ length: 4 }).map((_, i) => <PinInput.Input key={i} index={i} />)}\n</PinInput>',
+    vueCode: `<FewPinInput :length="4" @complete="console.log">\n  <FewPinInputInput v-for="i in 4" :key="i" :index="i - 1" />\n</FewPinInput>`,
   }),
   component({
     id: 'native-select', name: 'NativeSelect', category: 'Formulários',
@@ -99,6 +109,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Caraminholas · OrderForm'],
     references: ['MUI NativeSelect', 'PrimeReact Dropdown'],
     code: '<NativeSelect defaultValue="sp">\n  <option value="sp">São Paulo</option>\n  <option value="rj">Rio de Janeiro</option>\n</NativeSelect>',
+    vueCode: `<FewNativeSelect default-value="sp">\n  <option value="sp">São Paulo</option>\n  <option value="rj">Rio de Janeiro</option>\n</FewNativeSelect>`,
   }),
   component({
     id: 'checkbox', name: 'Checkbox', category: 'Formulários',
@@ -108,6 +119,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Caraminholas · configurações'],
     references: ['Radix Checkbox', 'MUI Checkbox'],
     code: '<Checkbox.Root checked={checked} onCheckedChange={setChecked}>\n  <Checkbox.Indicator />\n  Aceito os termos\n</Checkbox.Root>',
+    vueCode: `<FewCheckbox v-model:checked="checked">\n  <FewCheckboxIndicator />\n  Aceito os termos\n</FewCheckbox>`,
   }),
   component({
     id: 'checkbox-group', name: 'CheckboxGroup', category: 'Formulários',
@@ -117,6 +129,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Caraminholas · configurações'],
     references: ['Ark UI CheckboxGroup', 'Mantine Checkbox.Group'],
     code: '<CheckboxGroup value={value} onValueChange={setValue}>\n  <CheckboxGroup.Item value="a"><Checkbox.Indicator /> A</CheckboxGroup.Item>\n  <CheckboxGroup.Item value="b"><Checkbox.Indicator /> B</CheckboxGroup.Item>\n</CheckboxGroup>',
+    vueCode: `<FewCheckboxGroup v-model:value="value">\n  <FewCheckboxGroupItem value="a"><FewCheckboxIndicator /> A</FewCheckboxGroupItem>\n  <FewCheckboxGroupItem value="b"><FewCheckboxIndicator /> B</FewCheckboxGroupItem>\n</FewCheckboxGroup>`,
   }),
   component({
     id: 'radio-group', name: 'RadioGroup', category: 'Formulários',
@@ -126,6 +139,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix RadioGroup', 'MUI RadioGroup'],
     code: '<RadioGroup value={value} onValueChange={setValue}>\n  <RadioGroup.Item value="a"><RadioGroup.Indicator /> A</RadioGroup.Item>\n  <RadioGroup.Item value="b"><RadioGroup.Indicator /> B</RadioGroup.Item>\n</RadioGroup>',
+    vueCode: `<FewRadioGroup v-model:value="value">\n  <FewRadioGroupItem value="a"><FewRadioGroupIndicator /> A</FewRadioGroupItem>\n  <FewRadioGroupItem value="b"><FewRadioGroupIndicator /> B</FewRadioGroupItem>\n</FewRadioGroup>`,
   }),
   component({
     id: 'switch', name: 'Switch', category: 'Formulários',
@@ -135,6 +149,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['iFIGHT · preferências'],
     references: ['Radix Switch', 'MUI Switch'],
     code: '<Switch.Root checked={on} onCheckedChange={setOn}>\n  <Switch.Thumb />\n</Switch.Root>',
+    vueCode: `<FewSwitch v-model:checked="on">\n  <FewSwitchThumb />\n</FewSwitch>`,
   }),
   component({
     id: 'slider', name: 'Slider', category: 'Formulários',
@@ -144,6 +159,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix Slider', 'MUI Slider'],
     code: '<Slider defaultValue={[30]} max={100} step={5}>\n  <Slider.Track>\n    <Slider.Range />\n    <Slider.Thumb index={0} />\n  </Slider.Track>\n</Slider>',
+    vueCode: `<FewSlider :default-value="[30]" :max="100" :step="5">\n  <FewSliderTrack>\n    <FewSliderRange />\n    <FewSliderThumb :index="0" />\n  </FewSliderTrack>\n</FewSlider>`,
   }),
   component({
     id: 'rating', name: 'Rating', category: 'Formulários',
@@ -153,6 +169,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['PrimeReact Rating', 'MUI Rating'],
     code: '<Rating defaultValue={3} max={5}>\n  {Array.from({ length: 5 }).map((_, i) => <Rating.Item key={i} value={i + 1} />)}\n</Rating>',
+    vueCode: `<FewRating :default-value="3" :max="5">\n  <FewRatingItem v-for="i in 5" :key="i" :value="i" />\n</FewRating>`,
   }),
   component({
     id: 'file-upload', name: 'FileUpload', category: 'Formulários',
@@ -162,6 +179,7 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Ark UI FileUpload', 'Mantine FileInput'],
     code: '<FileUpload accept="image/*" maxSize={5_000_000} onFilesChange={setFiles}>\n  <FileUpload.Dropzone>\n    <FileUpload.Trigger>Escolher arquivo</FileUpload.Trigger>\n    <FileUpload.HiddenInput />\n  </FileUpload.Dropzone>\n</FileUpload>',
+    vueCode: `<FewFileUpload accept="image/*" :max-size="5000000" v-model:files="files">\n  <FewFileUploadDropzone>\n    <FewFileUploadTrigger>Escolher arquivo</FewFileUploadTrigger>\n    <FewFileUploadHiddenInput />\n  </FewFileUploadDropzone>\n</FewFileUpload>`,
   }),
   component({
     id: 'tags-input', name: 'TagsInput', category: 'Formulários',
@@ -171,5 +189,6 @@ export const formsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Ark UI TagsInput', 'Mantine TagsInput'],
     code: '<TagsInput value={tags} onValueChange={setTags} max={5}>\n  {tags.map((tag, i) => <TagsInput.Item key={tag} index={i}><TagsInput.ItemDelete /></TagsInput.Item>)}\n  <TagsInput.Input placeholder="Adicionar…" />\n</TagsInput>',
+    vueCode: `<FewTagsInput v-model:value="tags" :max="5">\n  <FewTagsInputItem v-for="(tag, i) in tags" :key="tag" :index="i"><FewTagsInputItemDelete /></FewTagsInputItem>\n  <FewTagsInputInput placeholder="Adicionar…" />\n</FewTagsInput>`,
   }),
 ];

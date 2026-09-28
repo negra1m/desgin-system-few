@@ -9,6 +9,7 @@ export const dataRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix (padrão de composição)', 'MUI Table'],
     code: '<Table.Root striped>\n  <Table.Caption>Pedidos recentes</Table.Caption>\n  <Table.Header><Table.Row><Table.Head scope="col">Cliente</Table.Head></Table.Row></Table.Header>\n  <Table.Body><Table.Row><Table.Cell>Ana Lima</Table.Cell></Table.Row></Table.Body>\n</Table.Root>',
+    vueCode: '<FewTable striped>\n  <FewTableCaption>Pedidos recentes</FewTableCaption>\n  <FewTableHeader><FewTableRow><FewTableHead>Cliente</FewTableHead></FewTableRow></FewTableHeader>\n  <FewTableBody><FewTableRow><FewTableCell>Ana Lima</FewTableCell></FewTableRow></FewTableBody>\n</FewTable>',
   }),
   component({
     id: 'data-table', name: 'DataTable', category: 'Dados',
@@ -18,6 +19,7 @@ export const dataRegistry: ComponentRecord[] = [
     origins: ['Caraminholas · pedidos', 'iFIGHT · alunos'],
     references: ['MUI DataGrid', 'PrimeReact DataTable'],
     code: '<DataTable caption="Pedidos" rowKey={row => row.id}\n  columns={[{ key: "id", label: "Pedido", render: row => row.id, sortable: true }]}\n  rows={pedidos} />',
+    vueCode: '<FewDataTable\n  caption="Pedidos"\n  :columns="columns"\n  :rows="pedidos"\n  :row-key="row => row.id"\n/>',
   }),
   component({
     id: 'list', name: 'List', category: 'Dados',
@@ -27,6 +29,7 @@ export const dataRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['MUI List'],
     code: '<List variant="divided">\n  <List.Item>\n    <List.ItemContent><List.ItemTitle>Ana Lima</List.ItemTitle><List.ItemDescription>Aluna desde 2024</List.ItemDescription></List.ItemContent>\n  </List.Item>\n</List>',
+    vueCode: '<FewList variant="divided">\n  <FewListItem>\n    <FewListItemContent>\n      <FewListItemTitle>Ana Lima</FewListItemTitle>\n      <FewListItemDescription>Aluna desde 2024</FewListItemDescription>\n    </FewListItemContent>\n  </FewListItem>\n</FewList>',
   }),
   component({
     id: 'description-list', name: 'DescriptionList', category: 'Dados',
@@ -36,6 +39,7 @@ export const dataRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['MDN <dl>', 'GOV.UK Design System summary list'],
     code: '<DescriptionList layout="horizontal">\n  <DescriptionList.Item><DescriptionList.Term>Plano</DescriptionList.Term><DescriptionList.Details>Mensal</DescriptionList.Details></DescriptionList.Item>\n</DescriptionList>',
+    vueCode: '<FewDescriptionList layout="horizontal">\n  <FewDescriptionListItem>\n    <FewDescriptionListTerm>Plano</FewDescriptionListTerm>\n    <FewDescriptionListDetails>Mensal</FewDescriptionListDetails>\n  </FewDescriptionListItem>\n</FewDescriptionList>',
   }),
   component({
     id: 'avatar', name: 'Avatar', category: 'Dados',
@@ -45,6 +49,7 @@ export const dataRegistry: ComponentRecord[] = [
     origins: ['iFIGHT · alunos'],
     references: ['Radix Avatar'],
     code: '<Avatar.Root name="Ana Lima">\n  <Avatar.Image src="/ana.jpg" />\n  <Avatar.Fallback />\n  <Avatar.Status status="online" />\n</Avatar.Root>',
+    vueCode: '<FewAvatar name="Ana Lima">\n  <FewAvatarImage src="/ana.jpg" />\n  <FewAvatarFallback />\n  <FewAvatarStatus status="online" />\n</FewAvatar>',
   }),
   component({
     id: 'avatar-group', name: 'AvatarGroup', category: 'Dados',
@@ -54,6 +59,7 @@ export const dataRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix Avatar (composição)', 'MUI AvatarGroup'],
     code: '<AvatarGroup.Root max={3}>\n  <Avatar.Root name="Ana Lima"><Avatar.Fallback /></Avatar.Root>\n  <Avatar.Root name="João Santos"><Avatar.Fallback /></Avatar.Root>\n  <AvatarGroup.Overflow />\n</AvatarGroup.Root>',
+    vueCode: '<FewAvatarGroup :max="3">\n  <FewAvatar name="Ana Lima"><FewAvatarFallback /></FewAvatar>\n  <FewAvatar name="João Santos"><FewAvatarFallback /></FewAvatar>\n  <FewAvatarGroupOverflow />\n</FewAvatarGroup>',
   }),
   component({
     id: 'stat', name: 'Stat', category: 'Dados',
@@ -63,6 +69,7 @@ export const dataRegistry: ComponentRecord[] = [
     origins: ['iFIGHT · Visão da Academia'],
     references: ['MUI Card + Typography'],
     code: '<Stat tone="success">\n  <Stat.Label>Alunos ativos</Stat.Label>\n  <Stat.Value>148</Stat.Value>\n  <Stat.Change direction="up">8 novas matrículas</Stat.Change>\n</Stat>',
+    vueCode: '<FewStat tone="success">\n  <FewStatLabel>Alunos ativos</FewStatLabel>\n  <FewStatValue>148</FewStatValue>\n  <FewStatChange direction="up">8 novas matrículas</FewStatChange>\n</FewStat>',
   }),
   component({
     id: 'timeline', name: 'Timeline', category: 'Dados',
@@ -72,6 +79,7 @@ export const dataRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['PrimeReact Timeline', 'MUI Timeline'],
     code: '<Timeline>\n  <Timeline.Item state="complete">\n    <Timeline.Indicator />\n    <Timeline.Content><Timeline.Title>Pedido confirmado</Timeline.Title><Timeline.Time dateTime="2026-09-20">20 de set.</Timeline.Time></Timeline.Content>\n  </Timeline.Item>\n</Timeline>',
+    vueCode: '<FewTimeline>\n  <FewTimelineItem state="complete">\n    <FewTimelineIndicator />\n    <FewTimelineContent>\n      <FewTimelineTitle>Pedido confirmado</FewTimelineTitle>\n      <FewTimelineTime datetime="2026-09-20">20 de set.</FewTimelineTime>\n    </FewTimelineContent>\n  </FewTimelineItem>\n</FewTimeline>',
   }),
   component({
     id: 'tree', name: 'Tree', category: 'Dados',
@@ -81,6 +89,7 @@ export const dataRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['WAI-ARIA APG Tree View', 'PrimeReact Tree'],
     code: '<Tree defaultExpanded={["pastas"]}>\n  <Tree.Item value="pastas">\n    <Tree.ItemTrigger>Pastas</Tree.ItemTrigger>\n    <Tree.ItemContent><Tree.Item value="contratos"><Tree.ItemTrigger>Contratos</Tree.ItemTrigger></Tree.Item></Tree.ItemContent>\n  </Tree.Item>\n</Tree>',
+    vueCode: '<FewTree :default-expanded="[\'pastas\']">\n  <FewTreeItem value="pastas">\n    <FewTreeItemTrigger>Pastas</FewTreeItemTrigger>\n    <FewTreeItemContent>\n      <FewTreeItem value="contratos">\n        <FewTreeItemTrigger>Contratos</FewTreeItemTrigger>\n      </FewTreeItem>\n    </FewTreeItemContent>\n  </FewTreeItem>\n</FewTree>',
   }),
   component({
     id: 'accordion', name: 'Accordion', category: 'Dados',
@@ -90,6 +99,7 @@ export const dataRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix Accordion'],
     code: '<Accordion type="single" collapsible defaultValue="faq-1">\n  <Accordion.Item value="faq-1">\n    <Accordion.Header><Accordion.Trigger>Como funciona o plano?</Accordion.Trigger></Accordion.Header>\n    <Accordion.Content>Cobrança mensal, sem fidelidade.</Accordion.Content>\n  </Accordion.Item>\n</Accordion>',
+    vueCode: '<FewAccordion type="single" collapsible default-value="faq-1">\n  <FewAccordionItem value="faq-1">\n    <FewAccordionHeader><FewAccordionTrigger>Como funciona o plano?</FewAccordionTrigger></FewAccordionHeader>\n    <FewAccordionContent>Cobrança mensal, sem fidelidade.</FewAccordionContent>\n  </FewAccordionItem>\n</FewAccordion>',
   }),
   component({
     id: 'collapsible', name: 'Collapsible', category: 'Dados',
@@ -99,6 +109,7 @@ export const dataRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix Collapsible'],
     code: '<Collapsible defaultOpen={false}>\n  <Collapsible.Trigger>Ver detalhes técnicos</Collapsible.Trigger>\n  <Collapsible.Content>Node 20, PostgreSQL 15, Redis 7.</Collapsible.Content>\n</Collapsible>',
+    vueCode: '<FewCollapsible :default-open="false">\n  <FewCollapsibleTrigger>Ver detalhes técnicos</FewCollapsibleTrigger>\n  <FewCollapsibleContent>Node 20, PostgreSQL 15, Redis 7.</FewCollapsibleContent>\n</FewCollapsible>',
   }),
   component({
     id: 'carousel', name: 'Carousel', category: 'Dados',
@@ -108,5 +119,6 @@ export const dataRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix (padrão de composição)', 'MUI Stepper/Carousel patterns'],
     code: '<Carousel loop>\n  <Carousel.Viewport><Carousel.Content><Carousel.Item>1</Carousel.Item><Carousel.Item>2</Carousel.Item></Carousel.Content></Carousel.Viewport>\n  <Carousel.Previous>‹</Carousel.Previous><Carousel.Next>›</Carousel.Next>\n  <Carousel.Indicators />\n</Carousel>',
+    vueCode: '<FewCarousel loop>\n  <FewCarouselViewport>\n    <FewCarouselContent>\n      <FewCarouselItem>1</FewCarouselItem>\n      <FewCarouselItem>2</FewCarouselItem>\n    </FewCarouselContent>\n  </FewCarouselViewport>\n  <FewCarouselPrevious>‹</FewCarouselPrevious>\n  <FewCarouselNext>›</FewCarouselNext>\n  <FewCarouselIndicators />\n</FewCarousel>',
   }),
 ];

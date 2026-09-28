@@ -182,6 +182,9 @@ h2 { font-size: 24px; letter-spacing: -.8px; font-weight: 500; line-height: 1.4;
 .component-demo { border: 1px solid #40354e; border-radius: 12px; overflow: hidden; }
 .demo-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #141121; border-bottom: 1px solid #3a3046; }
 .demo-toolbar > span { font: 9px ui-monospace, Consolas, monospace; letter-spacing: 1px; color: #baa8cc; }
+.demo-toolbar-controls { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.demo-toolbar-controls select { min-width: 96px; }
+.demo-canvas [data-framework="vue"] { display: contents; }
 .demo-canvas { padding: 40px; background: var(--few-canvas); color: var(--few-ink); min-height: 250px; display: grid; align-content: center; }
 .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
 .demo-stack { display: flex; flex-direction: column; gap: 20px; }

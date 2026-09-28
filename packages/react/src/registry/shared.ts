@@ -9,7 +9,9 @@ export interface ComponentRecord {
   parts: string[];
   /** Referências de mercado que inspiraram a API. */
   references: string[];
+  /** Mesmo exemplo de `code`, em template Vue (`@fewcompany/vue`). Vazio enquanto não houver snippet. */
+  vueCode: string;
 }
 
-export interface ComponentInput { id: string; name: string; category: Category; description: string; variants: string[]; origins: string[]; code: string; parts?: string[]; references?: string[] }
-export const component = ({ parts = [], references = [], ...input }: ComponentInput): ComponentRecord => ({ ...input, parts, references, version: LIBRARY_VERSION, consumers: ['Catálogo Few'] });
+export interface ComponentInput { id: string; name: string; category: Category; description: string; variants: string[]; origins: string[]; code: string; vueCode?: string; parts?: string[]; references?: string[] }
+export const component = ({ parts = [], references = [], vueCode = '', ...input }: ComponentInput): ComponentRecord => ({ ...input, parts, references, vueCode, version: LIBRARY_VERSION, consumers: ['Catálogo Few'] });

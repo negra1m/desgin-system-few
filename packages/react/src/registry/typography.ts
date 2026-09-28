@@ -8,6 +8,7 @@ export const typographyRegistry: ComponentRecord[] = [
     origins: ['Catálogo Few · hero e seções'],
     references: ['Radix Themes Heading', 'MUI Typography'],
     code: '<Heading level={1} size="3xl" tone="gradient">Few UI</Heading>',
+    vueCode: `<FewHeading :level="1" size="3xl" tone="gradient">Few UI</FewHeading>`,
   }),
   component({
     id: 'text', name: 'Text', category: 'Tipografia',
@@ -16,6 +17,7 @@ export const typographyRegistry: ComponentRecord[] = [
     origins: ['Catálogo Few · hero e seções'],
     references: ['Radix Themes Text', 'MUI Typography'],
     code: '<Text as="p" tone="muted" lineClamp={2}>Descrição mais longa…</Text>',
+    vueCode: `<FewText as="p" tone="muted" :line-clamp="2">Descrição mais longa…</FewText>`,
   }),
   component({
     id: 'code', name: 'Code', category: 'Tipografia',
@@ -24,6 +26,7 @@ export const typographyRegistry: ComponentRecord[] = [
     origins: ['Catálogo Few · painel de código'],
     references: ['Radix Themes Code', 'MUI Typography'],
     code: '<Code block copyable lang="tsx">{"const x = 1;"}</Code>',
+    vueCode: `<FewCode block copyable lang="tsx">const x = 1;</FewCode>`,
   }),
   component({
     id: 'kbd', name: 'Kbd', category: 'Tipografia',
@@ -32,5 +35,6 @@ export const typographyRegistry: ComponentRecord[] = [
     origins: ['Catálogo Few · atalho de busca'],
     references: ['Radix Themes Kbd', 'MUI Typography'],
     code: '<Kbd keys={["Ctrl", "K"]} />',
+    vueCode: `<FewKbd :keys="['Ctrl', 'K']" />`,
   }),
 ];

@@ -13,6 +13,7 @@ test('registry has unique ids, current version, examples, parts and honest adopt
     assert.equal(item.version, '1.1.0', item.id);
     assert.match(item.id, /^[a-z0-9-]+$/, item.id);
     assert.ok(item.code && item.origins.length && item.variants.length && item.description, item.id);
+    assert.ok(item.vueCode && item.vueCode.trim().length > 0, `${item.id}: snippet Vue`);
     assert.ok(categories.includes(item.category), `${item.id}: categoria ${item.category}`);
     assert.deepEqual(item.consumers, ['Catálogo Few']);
   }
