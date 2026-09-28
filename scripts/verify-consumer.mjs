@@ -2,7 +2,7 @@ import { mkdtempSync, writeFileSync, rmSync, existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve, sep } from 'node:path';
 import { execFileSync } from 'node:child_process';
-const version = '1.0.0';
+const version = '1.1.0';
 const archives = [resolve(`fewcompany-core-${version}.tgz`), resolve(`fewcompany-ui-${version}.tgz`)];
 for (const archive of archives) if (!existsSync(archive)) throw new Error(`Run npm run pack:ui first (missing ${archive}).`);
 if (!process.env.npm_execpath) throw new Error('Run via npm run test:consumer.');

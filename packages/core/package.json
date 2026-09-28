@@ -1,6 +1,6 @@
 {
   "name": "@fewcompany/core",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Tokens, CSS e lógica headless (sem framework) do design system da Few Company.",
   "type": "module",
   "license": "UNLICENSED",

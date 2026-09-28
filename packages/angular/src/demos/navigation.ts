@@ -149,7 +149,7 @@ export class DemoNavigationMenu {}
           </div>
         </div>
         <div fewSidebarSeparator></div>
-        <div fewSidebarFooter><span class="few-muted">v1.0.0</span></div>
+        <div fewSidebarFooter><span class="few-muted">v1.1.0</span></div>
       </div>
     </div>
   `,

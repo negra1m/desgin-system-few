@@ -22,7 +22,8 @@ npm run test:consumer
 
 - `packages/core` (`@fewcompany/core`): tokens, CSS com namespace `few-` (um arquivo por componente, concatenado no build) e lógica headless em funções puras, sem DOM nem framework.
 - `packages/react` (`@fewcompany/ui`): adaptador React. Slot/`asChild`, contextos, hooks (`useControllableState`, `useDismiss`, `usePosition`, `useTopLayer`), 82 componentes compostos e o registry do catálogo.
-- `packages/angular`, `packages/vue`: reservados. Devem reusar o mesmo core e CSS.
+- `packages/angular` (`@fewcompany/angular`): adaptador Angular 22 (standalone, signals, zoneless). Partes como diretivas de atributo, estado por `model()`, testes SSR com platform-server. Contrato em [docs/composition-angular.md](docs/composition-angular.md).
+- `packages/vue` (`@fewcompany/vue`): adaptador Vue 3.5 em render functions, `as-child`, `v-model:value`, testes SSR com `@vue/server-renderer`. Contrato em [docs/composition-vue.md](docs/composition-vue.md).
 - `apps/catalog`: documentação interativa Next.js, exportada como HTML estático; demos por categoria em `apps/catalog/demos`.
 - `docs`: padrão de composição, decisões de marca, integração, adoção, validação e estratégia npm.
 - `tests`: contratos por categoria; `scripts/verify-catalog.mjs`: smoke test de navegador com Playwright; `scripts/verify-consumer.mjs`: instala os tarballs em um consumidor independente.
@@ -36,7 +37,7 @@ Cada componente é uma raiz com partes, no modelo do Radix: `Tabs`, `Tabs.List`,
 Gere os tarballs com `npm run pack:ui`. No consumidor:
 
 ```sh
-npm install /caminho/fewcompany-core-1.0.0.tgz /caminho/fewcompany-ui-1.0.0.tgz
+npm install /caminho/fewcompany-core-1.1.0.tgz /caminho/fewcompany-ui-1.1.0.tgz
 ```
 
 ```tsx

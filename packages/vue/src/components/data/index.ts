@@ -1,0 +1,13 @@
+// Barrel da categoria "data". Exporte aqui cada componente: export * from './nome.js';
+export * from './table.js';
+export * from './data-table.js';
+export * from './list.js';
+export * from './description-list.js';
+export * from './avatar.js';
+export * from './avatar-group.js';
+export * from './stat.js';
+export * from './timeline.js';
+export * from './tree.js';
+export * from './accordion.js';
+export * from './collapsible.js';
+export * from './carousel.js';

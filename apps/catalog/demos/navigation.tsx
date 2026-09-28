@@ -114,7 +114,7 @@ function SidebarDemo() {
         </Sidebar.Group>
       </Sidebar.Content>
       <Sidebar.Separator />
-      <Sidebar.Footer><span className="few-muted">v1.0.0</span></Sidebar.Footer>
+      <Sidebar.Footer><span className="few-muted">v1.1.0</span></Sidebar.Footer>
     </Sidebar>
   </div>;
 }

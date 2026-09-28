@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.0
+
+- **Adaptador Angular (`@fewcompany/angular`)**: os 82 componentes replicados para Angular 22 (standalone, signals, zoneless). Partes são diretivas/componentes de atributo aplicados no elemento do consumidor (`<button fewTabsTrigger>`), o que dispensa `asChild`; estado por `model()` (`[(value)]`, `[(open)]`); contexto por injeção; arrays `FEW_X` para `imports`. Build `ngc` parcial (publicável) e completo (testes SSR via `@angular/platform-server`). Contrato em `docs/composition-angular.md`.
+- **Adaptador Vue (`@fewcompany/vue`)**: os 82 componentes replicados para Vue 3.5 em render functions (sem SFC, compila com `tsc`). `as-child` via `renderPrimitive` (clona o filho do slot com `mergeProps`); `v-model:value`/`v-model:open`/`v-model:checked` via `useControllable`; contexto por `provide/inject`; testes SSR via `@vue/server-renderer`. Contrato em `docs/composition-vue.md`.
+- **Core**: `computeFloatingPosition` (posição de flutuantes com flip, sem DOM) compartilhado pelos adaptadores.
+- Mesmo CSS e mesmas classes `few-*`/`data-state` nos três adaptadores. `npm run pack:ui` gera os quatro tarballs (core, ui, angular, vue). Sem catálogo Angular/Vue ainda: as demos de cada categoria vivem em `src/demos` de cada pacote e servem de host para os testes.
+
 ## 1.0.0
 
 - **Padrão oficial.** A partir desta versão, o design system é a base obrigatória de todos os projetos React/Next da Few, salvo indicação explícita em contrário. Componentes importantes ausentes viram PR de novo componente; componentes ruins viram PR de correção na lib. Qualquer atraso causado pela lib deve ser reportado.

@@ -1,6 +1,6 @@
 export type Category = 'Utilitários' | 'Ações' | 'Formulários' | 'Navegação' | 'Overlays' | 'Feedback' | 'Dados' | 'Estrutura' | 'Tipografia';
 export const categories: Category[] = ['Utilitários', 'Ações', 'Formulários', 'Navegação', 'Overlays', 'Feedback', 'Dados', 'Estrutura', 'Tipografia'];
-export const LIBRARY_VERSION = '1.0.0';
+export const LIBRARY_VERSION = '1.1.0';
 
 export interface ComponentRecord {
   id: string; name: string; category: Category; description: string;

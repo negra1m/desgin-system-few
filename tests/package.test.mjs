@@ -10,7 +10,7 @@ test('registry has unique ids, current version, examples, parts and honest adopt
   assert.equal(new Set(registry.map(item => item.id)).size, registry.length);
   assert.ok(registry.length >= 80, `esperava pelo menos 80 componentes, registry tem ${registry.length}`);
   for (const item of registry) {
-    assert.equal(item.version, '1.0.0', item.id);
+    assert.equal(item.version, '1.1.0', item.id);
     assert.match(item.id, /^[a-z0-9-]+$/, item.id);
     assert.ok(item.code && item.origins.length && item.variants.length && item.description, item.id);
     assert.ok(categories.includes(item.category), `${item.id}: categoria ${item.category}`);
