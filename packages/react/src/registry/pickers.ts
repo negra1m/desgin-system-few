@@ -9,6 +9,16 @@ export const pickersRegistry: ComponentRecord[] = [
     origins: ['Caraminholas · OrderForm'],
     references: ['Radix Select', 'PrimeReact Dropdown'],
     code: '<Select defaultValue="few"><Select.Trigger><Select.Value placeholder="Selecione…"/><Select.Icon/></Select.Trigger><Select.Content><Select.Viewport><Select.Item value="few"><Select.ItemText>Few</Select.ItemText><Select.ItemIndicator/></Select.Item></Select.Viewport></Select.Content></Select>',
+    vueCode: `<FewSelect default-value="few">
+  <FewSelectTrigger>
+    <FewSelectValue placeholder="Selecione…" /><FewSelectIcon />
+  </FewSelectTrigger>
+  <FewSelectContent><FewSelectViewport>
+    <FewSelectItem value="few">
+      <FewSelectItemText>Few</FewSelectItemText><FewSelectItemIndicator />
+    </FewSelectItem>
+  </FewSelectViewport></FewSelectContent>
+</FewSelect>`,
   }),
   component({
     id: 'combobox', name: 'Combobox', category: 'Formulários',
@@ -18,6 +28,13 @@ export const pickersRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['MUI Autocomplete', 'PrimeReact AutoComplete'],
     code: '<Combobox><Combobox.Input placeholder="Buscar…"/><Combobox.Content><Combobox.Item value="few">Few</Combobox.Item><Combobox.Empty>Nada encontrado</Combobox.Empty></Combobox.Content></Combobox>',
+    vueCode: `<FewCombobox>
+  <FewComboboxInput placeholder="Buscar…" />
+  <FewComboboxContent>
+    <FewComboboxItem value="few">Few</FewComboboxItem>
+    <FewComboboxEmpty>Nada encontrado</FewComboboxEmpty>
+  </FewComboboxContent>
+</FewCombobox>`,
   }),
   component({
     id: 'multi-select', name: 'MultiSelect', category: 'Formulários',
@@ -27,6 +44,15 @@ export const pickersRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['PrimeReact MultiSelect', 'MUI Autocomplete multiple'],
     code: '<MultiSelect value={value} onValueChange={setValue}><MultiSelect.Trigger><MultiSelect.Value placeholder="Selecione…" maxDisplay={2}/></MultiSelect.Trigger><MultiSelect.Content><MultiSelect.Search/><MultiSelect.Item value="few">Few</MultiSelect.Item></MultiSelect.Content></MultiSelect>',
+    vueCode: `<FewMultiSelect v-model:value="value">
+  <FewMultiSelectTrigger>
+    <FewMultiSelectValue placeholder="Selecione…" :max-display="2" />
+  </FewMultiSelectTrigger>
+  <FewMultiSelectContent>
+    <FewMultiSelectSearch />
+    <FewMultiSelectItem value="few">Few</FewMultiSelectItem>
+  </FewMultiSelectContent>
+</FewMultiSelect>`,
   }),
   component({
     id: 'calendar', name: 'Calendar', category: 'Formulários',
@@ -36,6 +62,14 @@ export const pickersRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['PrimeReact Calendar', 'MUI DateCalendar'],
     code: '<Calendar mode="single" value={date} onValueChange={setDate}><Calendar.Header><Calendar.PrevButton/><Calendar.Heading/><Calendar.NextButton/></Calendar.Header><Calendar.Grid><Calendar.GridHead/><Calendar.GridBody/></Calendar.Grid></Calendar>',
+    vueCode: `<FewCalendar mode="single" v-model:value="date">
+  <FewCalendarHeader>
+    <FewCalendarPrevButton /><FewCalendarHeading /><FewCalendarNextButton />
+  </FewCalendarHeader>
+  <FewCalendarGrid>
+    <FewCalendarGridHead /><FewCalendarGridBody />
+  </FewCalendarGrid>
+</FewCalendar>`,
   }),
   component({
     id: 'date-picker', name: 'DatePicker', category: 'Formulários',
@@ -45,5 +79,13 @@ export const pickersRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['MUI DatePicker', 'Radix + react-day-picker (padrão de composição)'],
     code: '<DatePicker value={date} onValueChange={setDate}><DatePicker.Input placeholder="dd/mm/aaaa"/><DatePicker.Trigger/><DatePicker.Clear/><DatePicker.Content><Calendar mode="single" value={date} onValueChange={setDate}>…</Calendar></DatePicker.Content></DatePicker>',
+    vueCode: `<FewDatePicker v-model:value="date">
+  <FewDatePickerInput placeholder="dd/mm/aaaa" />
+  <FewDatePickerTrigger />
+  <FewDatePickerClear />
+  <FewDatePickerContent>
+    <FewCalendar mode="single" v-model:value="date">…</FewCalendar>
+  </FewDatePickerContent>
+</FewDatePicker>`,
   }),
 ];

@@ -9,6 +9,14 @@ export const overlaysRegistry: ComponentRecord[] = [
     origins: ['Caraminholas · StageDialog'],
     references: ['Radix Dialog', 'MUI Dialog'],
     code: '<Dialog><Dialog.Trigger asChild><Button>Abrir</Button></Dialog.Trigger><Dialog.Content size="md"><Dialog.Title>Título</Dialog.Title><Dialog.Description>Descrição.</Dialog.Description><Dialog.Close asChild><Button variant="ghost">Fechar</Button></Dialog.Close></Dialog.Content></Dialog>',
+    vueCode: `<FewDialog>
+  <FewDialogTrigger as-child><FewButton>Abrir</FewButton></FewDialogTrigger>
+  <FewDialogContent size="md">
+    <FewDialogTitle>Título</FewDialogTitle>
+    <FewDialogDescription>Descrição.</FewDialogDescription>
+    <FewDialogClose as-child><FewButton variant="ghost">Fechar</FewButton></FewDialogClose>
+  </FewDialogContent>
+</FewDialog>`,
   }),
   component({
     id: 'alert-dialog', name: 'AlertDialog', category: 'Overlays',
@@ -18,6 +26,15 @@ export const overlaysRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix AlertDialog', 'PrimeReact ConfirmDialog'],
     code: '<AlertDialog><AlertDialog.Trigger asChild><Button variant="danger">Excluir</Button></AlertDialog.Trigger><AlertDialog.Content><AlertDialog.Title>Excluir item?</AlertDialog.Title><AlertDialog.Description>Não pode ser desfeito.</AlertDialog.Description><AlertDialog.Cancel asChild><Button variant="secondary">Cancelar</Button></AlertDialog.Cancel><AlertDialog.Action asChild><Button variant="danger">Excluir</Button></AlertDialog.Action></AlertDialog.Content></AlertDialog>',
+    vueCode: `<FewAlertDialog>
+  <FewAlertDialogTrigger as-child><FewButton variant="danger">Excluir</FewButton></FewAlertDialogTrigger>
+  <FewAlertDialogContent>
+    <FewAlertDialogTitle>Excluir item?</FewAlertDialogTitle>
+    <FewAlertDialogDescription>Não pode ser desfeito.</FewAlertDialogDescription>
+    <FewAlertDialogCancel as-child><FewButton variant="secondary">Cancelar</FewButton></FewAlertDialogCancel>
+    <FewAlertDialogAction as-child><FewButton variant="danger">Excluir</FewButton></FewAlertDialogAction>
+  </FewAlertDialogContent>
+</FewAlertDialog>`,
   }),
   component({
     id: 'drawer', name: 'Drawer', category: 'Overlays',
@@ -27,6 +44,13 @@ export const overlaysRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Vaul', 'MUI Drawer'],
     code: '<Drawer side="right"><Drawer.Trigger asChild><Button>Filtros</Button></Drawer.Trigger><Drawer.Content><Drawer.Title>Filtros</Drawer.Title><Drawer.Close asChild><Button variant="ghost">Fechar</Button></Drawer.Close></Drawer.Content></Drawer>',
+    vueCode: `<FewDrawer side="right">
+  <FewDrawerTrigger as-child><FewButton>Filtros</FewButton></FewDrawerTrigger>
+  <FewDrawerContent>
+    <FewDrawerTitle>Filtros</FewDrawerTitle>
+    <FewDrawerClose as-child><FewButton variant="ghost">Fechar</FewButton></FewDrawerClose>
+  </FewDrawerContent>
+</FewDrawer>`,
   }),
   component({
     id: 'popover', name: 'Popover', category: 'Overlays',
@@ -36,6 +60,12 @@ export const overlaysRegistry: ComponentRecord[] = [
     origins: ['iFIGHT · painel de ações rápidas'],
     references: ['Radix Popover', 'PrimeReact OverlayPanel'],
     code: '<Popover><Popover.Trigger asChild><Button variant="secondary">Ajustes</Button></Popover.Trigger><Popover.Content side="bottom" align="start"><Popover.Arrow />Conteúdo</Popover.Content></Popover>',
+    vueCode: `<FewPopover>
+  <FewPopoverTrigger as-child><FewButton variant="secondary">Ajustes</FewButton></FewPopoverTrigger>
+  <FewPopoverContent side="bottom" align="start">
+    <FewPopoverArrow />Conteúdo
+  </FewPopoverContent>
+</FewPopover>`,
   }),
   component({
     id: 'tooltip', name: 'Tooltip', category: 'Overlays',
@@ -45,6 +75,12 @@ export const overlaysRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix Tooltip', 'MUI Tooltip'],
     code: '<Tooltip.Provider><Tooltip><Tooltip.Trigger asChild><Button variant="ghost">?</Button></Tooltip.Trigger><Tooltip.Content>Ajuda<Tooltip.Arrow /></Tooltip.Content></Tooltip></Tooltip.Provider>',
+    vueCode: `<FewTooltipProvider>
+  <FewTooltip>
+    <FewTooltipTrigger as-child><FewButton variant="ghost">?</FewButton></FewTooltipTrigger>
+    <FewTooltipContent>Ajuda<FewTooltipArrow /></FewTooltipContent>
+  </FewTooltip>
+</FewTooltipProvider>`,
   }),
   component({
     id: 'dropdown-menu', name: 'DropdownMenu', category: 'Overlays',
@@ -54,6 +90,14 @@ export const overlaysRegistry: ComponentRecord[] = [
     origins: ['iFIGHT · ações da linha da tabela'],
     references: ['Radix DropdownMenu', 'MUI Menu'],
     code: '<DropdownMenu><DropdownMenu.Trigger asChild><Button variant="secondary">Ações</Button></DropdownMenu.Trigger><DropdownMenu.Content><DropdownMenu.Item>Editar</DropdownMenu.Item><DropdownMenu.Separator /><DropdownMenu.Item disabled>Excluir</DropdownMenu.Item></DropdownMenu.Content></DropdownMenu>',
+    vueCode: `<FewDropdownMenu>
+  <FewDropdownMenuTrigger as-child><FewButton variant="secondary">Ações</FewButton></FewDropdownMenuTrigger>
+  <FewDropdownMenuContent>
+    <FewDropdownMenuItem>Editar</FewDropdownMenuItem>
+    <FewDropdownMenuSeparator />
+    <FewDropdownMenuItem disabled>Excluir</FewDropdownMenuItem>
+  </FewDropdownMenuContent>
+</FewDropdownMenu>`,
   }),
   component({
     id: 'context-menu', name: 'ContextMenu', category: 'Overlays',
@@ -63,6 +107,15 @@ export const overlaysRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix ContextMenu'],
     code: '<ContextMenu><ContextMenu.Trigger><div className="demo-surface">Clique com o botão direito</div></ContextMenu.Trigger><ContextMenu.Content><ContextMenu.Item>Copiar</ContextMenu.Item><ContextMenu.Item>Colar</ContextMenu.Item></ContextMenu.Content></ContextMenu>',
+    vueCode: `<FewContextMenu>
+  <FewContextMenuTrigger>
+    <div class="demo-surface">Clique com o botão direito</div>
+  </FewContextMenuTrigger>
+  <FewContextMenuContent>
+    <FewContextMenuItem>Copiar</FewContextMenuItem>
+    <FewContextMenuItem>Colar</FewContextMenuItem>
+  </FewContextMenuContent>
+</FewContextMenu>`,
   }),
   component({
     id: 'menubar', name: 'Menubar', category: 'Overlays',
@@ -72,6 +125,14 @@ export const overlaysRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix Menubar', 'PrimeReact Menubar'],
     code: '<Menubar><Menubar.Menu value="file"><Menubar.Trigger>Arquivo</Menubar.Trigger><Menubar.Content><Menubar.Item>Novo</Menubar.Item></Menubar.Content></Menubar.Menu></Menubar>',
+    vueCode: `<FewMenubar>
+  <FewMenubarMenu value="file">
+    <FewMenubarTrigger>Arquivo</FewMenubarTrigger>
+    <FewMenubarContent>
+      <FewMenubarItem>Novo</FewMenubarItem>
+    </FewMenubarContent>
+  </FewMenubarMenu>
+</FewMenubar>`,
   }),
   component({
     id: 'toast', name: 'Toast', category: 'Overlays',
@@ -81,5 +142,10 @@ export const overlaysRegistry: ComponentRecord[] = [
     origins: ['iFIGHT · notificações de partida'],
     references: ['Radix Toast', 'Sonner'],
     code: 'const { toast } = useToast(); <Toast.Provider><Toast.Viewport /></Toast.Provider>; toast({ title: "Salvo", tone: "success" });',
+    vueCode: `<!-- const { toast } = useToast() -->
+<FewToastProvider>
+  <FewToastViewport />
+</FewToastProvider>
+<!-- toast({ title: "Salvo", tone: "success" }) -->`,
   }),
 ];

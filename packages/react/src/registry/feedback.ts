@@ -9,6 +9,7 @@ export const feedbackRegistry: ComponentRecord[] = [
     origins: ['Caraminholas · feedback de checkout', 'iFIGHT · cards de status'],
     references: ['Radix (padrão de composição)', 'PrimeReact Message'],
     code: '<Alert tone="success"><Alert.Icon /><Alert.Title>Salvo</Alert.Title><Alert.Description>Suas alterações foram salvas.</Alert.Description><Alert.Close onDismiss={() => {}} /></Alert>',
+    vueCode: '<FewAlert tone="success">\n  <FewAlertIcon />\n  <FewAlertTitle>Salvo</FewAlertTitle>\n  <FewAlertDescription>Suas alterações foram salvas.</FewAlertDescription>\n  <FewAlertClose @dismiss="() => {}" />\n</FewAlert>',
   }),
   component({
     id: 'badge', name: 'Badge', category: 'Feedback',
@@ -18,6 +19,7 @@ export const feedbackRegistry: ComponentRecord[] = [
     origins: ['Caraminholas · .chip', 'iFIGHT · ui/badge.tsx'],
     references: ['Radix Badge', 'PrimeReact Tag'],
     code: '<Badge tone="success" dot>Ativo</Badge>',
+    vueCode: '<FewBadge tone="success" dot>Ativo</FewBadge>',
   }),
   component({
     id: 'tag', name: 'Tag', category: 'Feedback',
@@ -27,6 +29,7 @@ export const feedbackRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['PrimeReact Chip', 'MUI Chip'],
     code: '<Tag><Tag.Label>React</Tag.Label><Tag.Close label="React" onRemove={() => {}} /></Tag>',
+    vueCode: '<FewTag>\n  <FewTagLabel>React</FewTagLabel>\n  <FewTagClose label="React" @remove="() => {}" />\n</FewTag>',
   }),
   component({
     id: 'progress', name: 'Progress', category: 'Feedback',
@@ -36,6 +39,7 @@ export const feedbackRegistry: ComponentRecord[] = [
     origins: ['iFIGHT · progressão'],
     references: ['Radix Progress'],
     code: '<Progress value={72}><Progress.Label>Perfil</Progress.Label><Progress.Track><Progress.Indicator /></Progress.Track><Progress.Value /></Progress>',
+    vueCode: '<FewProgress :value="72">\n  <FewProgressLabel>Perfil</FewProgressLabel>\n  <FewProgressTrack><FewProgressIndicator /></FewProgressTrack>\n  <FewProgressValue />\n</FewProgress>',
   }),
   component({
     id: 'progress-circle', name: 'Progress Circle', category: 'Feedback',
@@ -45,6 +49,7 @@ export const feedbackRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['MUI CircularProgress', 'Radix (padrão de composição)'],
     code: '<ProgressCircle value={72}><ProgressCircle.Circle /><ProgressCircle.Label /></ProgressCircle>',
+    vueCode: '<FewProgressCircle :value="72">\n  <FewProgressCircleCircle />\n  <FewProgressCircleLabel />\n</FewProgressCircle>',
   }),
   component({
     id: 'spinner', name: 'Spinner', category: 'Feedback',
@@ -54,6 +59,7 @@ export const feedbackRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix (padrão de composição)', 'PrimeReact ProgressSpinner'],
     code: '<Spinner label="Carregando pedidos" />',
+    vueCode: '<FewSpinner label="Carregando pedidos" />',
   }),
   component({
     id: 'skeleton', name: 'Skeleton', category: 'Feedback',
@@ -63,6 +69,7 @@ export const feedbackRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix (padrão de composição)'],
     code: '<Skeleton variant="text" lines={3} />',
+    vueCode: '<FewSkeleton variant="text" :lines="3" />',
   }),
   component({
     id: 'empty-state', name: 'Empty State', category: 'Feedback',
@@ -72,5 +79,6 @@ export const feedbackRegistry: ComponentRecord[] = [
     origins: ['Caraminholas · sacola vazia'],
     references: ['Radix (padrão de composição)'],
     code: '<EmptyState><EmptyState.Icon /><EmptyState.Title>Nada por aqui</EmptyState.Title><EmptyState.Description>Crie o primeiro projeto para começar.</EmptyState.Description><EmptyState.Actions><button className="few-button few-button--primary">Novo projeto</button></EmptyState.Actions></EmptyState>',
+    vueCode: '<FewEmptyState>\n  <FewEmptyStateIcon />\n  <FewEmptyStateTitle>Nada por aqui</FewEmptyStateTitle>\n  <FewEmptyStateDescription>Crie o primeiro projeto para começar.</FewEmptyStateDescription>\n  <FewEmptyStateActions>\n    <button class="few-button few-button--primary">Novo projeto</button>\n  </FewEmptyStateActions>\n</FewEmptyState>',
   }),
 ];

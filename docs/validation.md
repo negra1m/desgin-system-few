@@ -1,16 +1,17 @@
-# Validação · 1.0.0
+# Validação · 1.1.0
 
-Versão atual: 1.0.0 (composição Radix-style, núcleo `@fewcompany/core`, 82 componentes). Executada em 27/09/2026, Windows 11, Node 22/24, Chromium headless (Playwright 1.63).
+Versão atual: 1.1.0 (adaptadores Angular e Vue sobre o mesmo core e CSS da 1.0.0). Executada em 28/09/2026, Windows 11, Node 22/24, Angular 22.2, Vue 3.5.43, Chromium headless (Playwright 1.63).
 
-- `npm run build:ui`: core (tsc + concatenação de 80 arquivos CSS em `styles.css`) e adaptador React (tsc + cópia do CSS e tokens).
-- `npm run typecheck`: core, react e catálogo sem erros. O react resolve o core pelo `src` via `paths`; o catálogo resolve o `dist`.
-- `npm test`: 55 testes em `tests/*.test.mjs` (contratos por categoria + pacote): registry com ids únicos, 82 entradas, versão 1.0.0 e categorias válidas; Slot mescla props; Button `asChild`/loading; Field associa label, `aria-describedby` e `aria-invalid`; Checkbox indeterminate; Switch `role=switch`; Slider `aria-valuenow`; Dialog `aria-labelledby`; menus `role=menu`; Toast `aria-live` e fila do core; tabela vazia; `sortRows`; Accordion `aria-expanded`; `calendarGrid`, `filterOptions`, `parseDate`; `paginationRange`, `nextIndex`, `typeaheadIndex`; arquivos distribuídos com `"use client"`, temas e movimento reduzido.
-- `npm run build -w @fewcompany/catalog`: Next 16.3.6, exportação estática, 3 rotas.
-- `npm run pack:ui`: `fewcompany-core-1.0.0.tgz` e `fewcompany-ui-1.0.0.tgz`, sem dados de produtos.
-- `npm run test:consumer`: instala os dois tarballs em projeto React temporário independente; valida exports, CSS, tokens, core, `asChild`, Field e Tabs sem Next.
-- `node scripts/verify-catalog.mjs` com Playwright: navegação, busca, botão em carregamento, temas, modal com Escape e retorno de foco, teclado das abas, deep link `#table`, associação de labels, campo inválido e ausência de overflow em 390px. Sem erros de runtime no navegador.
-- Varredura extra: as 82 páginas de componente abertas por hash em 1440px e 390px, sem erro de página, sem erro de console, todas com demo e sem overflow horizontal. Única ocorrência: hashchange disparado antes da hidratação na primeira navegação após o load, que não reproduz em deep link direto nem após a hidratação.
+- `npm run build`: core (80 CSS concatenados), React, Angular (`ngc` parcial em `dist` + completo em `dist-full`, com pós-processamento de extensões ESM), Vue (`tsc`) e catálogo Next (exportação estática).
+- `npm run typecheck --workspaces`: core, React, Angular (`strictTemplates`), Vue e catálogo sem erros.
+- `npm test`: 128 testes em `tests/**/*.test.mjs`, todos passando:
+  - React (55): contratos por categoria e pacote (registry com 82 ids, versão 1.1.0, Slot, Field, Dialog, menus, Toast, tabela, calendário, headless).
+  - Angular (37): SSR via `@angular/platform-server` dos hosts em `packages/angular/src/demos`: Tabs, Breadcrumb, Pagination, Steps, CommandMenu, Button/Toggle/ToggleGroup, Field/Checkbox/Switch/Slider/RadioGroup/NumberInput, Select/Calendar/Combobox, Dialog/DropdownMenu/Menubar/Toast, Progress/Alert/Spinner/Badge/Tag, Table/Avatar/Accordion/Tree, Card/Separator/Toolbar/Grid, Heading/Text/Code/Kbd.
+  - Vue (36): SSR via `@vue/server-renderer` das demos em `packages/vue/src/demos`, mesma cobertura por categoria.
+- `npm run pack:ui`: `fewcompany-core-1.1.0.tgz`, `fewcompany-ui-1.1.0.tgz`, `fewcompany-angular-1.1.0.tgz`, `fewcompany-vue-1.1.0.tgz`.
+- `npm run test:consumer`: instala core + ui em projeto React temporário independente e valida exports, CSS, tokens, `asChild`, Field e Tabs.
+- Catálogo: `scripts/verify-catalog.mjs` com Playwright (navegação, busca, temas, modal, teclado, deep link, 390px) passa na 1.1.0. Varredura extra em modo Vue: as 82 páginas com o seletor "Framework" em Vue, todas com a demo montada (exceto `portal`, sem equivalente), snippet `@fewcompany/vue` presente, sem erro de página ou console e sem overflow.
 
-Para repetir o teste de navegador, execute `npm run build`, `npm run preview` e o script em outro terminal com Playwright instalado. `PLAYWRIGHT_MODULE` pode apontar para uma instalação externa do Playwright. Capturas geradas em `artifacts/`.
+Para repetir o teste de navegador, execute `npm run build`, `npm run preview` e o script em outro terminal com Playwright instalado. `PLAYWRIGHT_MODULE` pode apontar para uma instalação externa do Playwright.
 
-Limites: não é auditoria completa WCAG; o catálogo foi verificado em Chromium. Testes de contrato usam render estático; interações de ponteiro (Slider, FileUpload, Carousel, ContextMenu, Drawer, Popover) ainda não têm teste automatizado nem revisão manual registrada. Integrações em iFIGHT, Caraminholas e renderer desktop ainda não foram realizadas. Não houve publicação no registro npm.
+Limites: não é auditoria completa WCAG. Vue foi validado por SSR, typecheck e montagem das 82 demos no catálogo (Chromium), mas sem teste de interação além de Tabs e Button. Angular foi validado só por SSR e typecheck: interações de ponteiro, foco, popovers e diálogos ainda não têm teste em browser nem consumidor de referência (não há catálogo Angular nem verificação dos tarballs Angular/Vue em app real). Angular sem `ControlValueAccessor` (`@angular/forms`). Integrações em iFIGHT, Caraminholas e renderer desktop ainda não foram realizadas. Não houve publicação no registro npm.

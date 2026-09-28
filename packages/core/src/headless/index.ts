@@ -1,5 +1,6 @@
 // Lógica pura, sem DOM e sem framework. Cada categoria tem seu barrel.
 export * from './shared.js';
+export * from './position.js';
 export * from './actions.js';
 export * from './forms.js';
 export * from './pickers.js';

@@ -9,6 +9,14 @@ export const navigationRegistry: ComponentRecord[] = [
     origins: ['iFIGHT · navegação de painéis'],
     references: ['Radix Tabs', 'PrimeReact TabView'],
     code: '<Tabs defaultValue="geral"><Tabs.List><Tabs.Trigger value="geral">Visão geral</Tabs.Trigger><Tabs.Trigger value="atividade">Atividade</Tabs.Trigger></Tabs.List><Tabs.Content value="geral">…</Tabs.Content><Tabs.Content value="atividade">…</Tabs.Content></Tabs>',
+    vueCode: `<FewTabs default-value="geral">
+  <FewTabsList>
+    <FewTabsTrigger value="geral">Visão geral</FewTabsTrigger>
+    <FewTabsTrigger value="atividade">Atividade</FewTabsTrigger>
+  </FewTabsList>
+  <FewTabsContent value="geral">…</FewTabsContent>
+  <FewTabsContent value="atividade">…</FewTabsContent>
+</FewTabs>`,
   }),
   component({
     id: 'breadcrumb', name: 'Breadcrumb', category: 'Navegação',
@@ -18,6 +26,13 @@ export const navigationRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['shadcn/ui Breadcrumb', 'WAI-ARIA APG Breadcrumb'],
     code: '<Breadcrumb><Breadcrumb.List><Breadcrumb.Item><Breadcrumb.Link href="/">Início</Breadcrumb.Link></Breadcrumb.Item><Breadcrumb.Separator /><Breadcrumb.Item><Breadcrumb.Page>Projeto</Breadcrumb.Page></Breadcrumb.Item></Breadcrumb.List></Breadcrumb>',
+    vueCode: `<FewBreadcrumb>
+  <FewBreadcrumbList>
+    <FewBreadcrumbItem><FewBreadcrumbLink href="/">Início</FewBreadcrumbLink></FewBreadcrumbItem>
+    <FewBreadcrumbSeparator />
+    <FewBreadcrumbItem><FewBreadcrumbPage>Projeto</FewBreadcrumbPage></FewBreadcrumbItem>
+  </FewBreadcrumbList>
+</FewBreadcrumb>`,
   }),
   component({
     id: 'pagination', name: 'Pagination', category: 'Navegação',
@@ -27,6 +42,11 @@ export const navigationRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['shadcn/ui Pagination'],
     code: '<Pagination page={page} onPageChange={setPage} total={12}><Pagination.Previous /><Pagination.List /><Pagination.Next /></Pagination>',
+    vueCode: `<FewPagination v-model:page="page" :total="12">
+  <FewPaginationPrevious />
+  <FewPaginationList />
+  <FewPaginationNext />
+</FewPagination>`,
   }),
   component({
     id: 'steps', name: 'Steps', category: 'Navegação',
@@ -36,6 +56,15 @@ export const navigationRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Ant Design Steps'],
     code: '<Steps value={step} onValueChange={setStep}><Steps.Item index={0}><Steps.Indicator /><Steps.Title>Dados</Steps.Title></Steps.Item><Steps.Separator /><Steps.Item index={1}><Steps.Indicator /><Steps.Title>Pagamento</Steps.Title></Steps.Item></Steps>',
+    vueCode: `<FewSteps v-model:value="step">
+  <FewStepsItem :index="0">
+    <FewStepsIndicator /><FewStepsTitle>Dados</FewStepsTitle>
+  </FewStepsItem>
+  <FewStepsSeparator />
+  <FewStepsItem :index="1">
+    <FewStepsIndicator /><FewStepsTitle>Pagamento</FewStepsTitle>
+  </FewStepsItem>
+</FewSteps>`,
   }),
   component({
     id: 'navigation-menu', name: 'NavigationMenu', category: 'Navegação',
@@ -45,6 +74,16 @@ export const navigationRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix Navigation Menu'],
     code: '<NavigationMenu><NavigationMenu.List><NavigationMenu.Item value="produto"><NavigationMenu.Trigger>Produto</NavigationMenu.Trigger><NavigationMenu.Content><NavigationMenu.Link href="/a">Produto A</NavigationMenu.Link></NavigationMenu.Content></NavigationMenu.Item></NavigationMenu.List></NavigationMenu>',
+    vueCode: `<FewNavigationMenu>
+  <FewNavigationMenuList>
+    <FewNavigationMenuItem value="produto">
+      <FewNavigationMenuTrigger>Produto</FewNavigationMenuTrigger>
+      <FewNavigationMenuContent>
+        <FewNavigationMenuLink href="/a">Produto A</FewNavigationMenuLink>
+      </FewNavigationMenuContent>
+    </FewNavigationMenuItem>
+  </FewNavigationMenuList>
+</FewNavigationMenu>`,
   }),
   component({
     id: 'sidebar', name: 'Sidebar', category: 'Navegação',
@@ -54,6 +93,17 @@ export const navigationRegistry: ComponentRecord[] = [
     origins: ['Catálogo Few · sidebar'],
     references: ['shadcn/ui Sidebar'],
     code: '<Sidebar collapsible="icon"><Sidebar.Header><Sidebar.Trigger /></Sidebar.Header><Sidebar.Content><Sidebar.Group><Sidebar.GroupLabel>Menu</Sidebar.GroupLabel><Sidebar.Menu><Sidebar.MenuItem><Sidebar.MenuButton isActive>Visão geral</Sidebar.MenuButton></Sidebar.MenuItem></Sidebar.Menu></Sidebar.Group></Sidebar.Content></Sidebar>',
+    vueCode: `<FewSidebar collapsible="icon">
+  <FewSidebarHeader><FewSidebarTrigger /></FewSidebarHeader>
+  <FewSidebarContent>
+    <FewSidebarGroup>
+      <FewSidebarGroupLabel>Menu</FewSidebarGroupLabel>
+      <FewSidebarMenu>
+        <FewSidebarMenuItem><FewSidebarMenuButton is-active>Visão geral</FewSidebarMenuButton></FewSidebarMenuItem>
+      </FewSidebarMenu>
+    </FewSidebarGroup>
+  </FewSidebarContent>
+</FewSidebar>`,
   }),
   component({
     id: 'command-menu', name: 'CommandMenu', category: 'Navegação',
@@ -63,5 +113,12 @@ export const navigationRegistry: ComponentRecord[] = [
     origins: ['Catálogo Few · busca "/"'],
     references: ['cmdk', 'shadcn/ui Command'],
     code: '<CommandMenu open={open} onOpenChange={setOpen} shortcut><CommandMenu.Input placeholder="Buscar…" /><CommandMenu.List><CommandMenu.Empty>Nada encontrado.</CommandMenu.Empty><CommandMenu.Item value="Novo projeto" onSelect={criar}>Novo projeto</CommandMenu.Item></CommandMenu.List></CommandMenu>',
+    vueCode: `<FewCommandMenu v-model:open="open" shortcut>
+  <FewCommandInput placeholder="Buscar…" />
+  <FewCommandList>
+    <FewCommandEmpty>Nada encontrado.</FewCommandEmpty>
+    <FewCommandItem value="Novo projeto" @select="criar">Novo projeto</FewCommandItem>
+  </FewCommandList>
+</FewCommandMenu>`,
   }),
 ];

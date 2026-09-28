@@ -9,6 +9,7 @@ export const actionsRegistry: ComponentRecord[] = [
     origins: ['Caraminholas · .btn', 'iFIGHT · ui/button.tsx'],
     references: ['Radix Slot', 'PrimeReact Button', 'MUI Button'],
     code: '<Button variant="primary">Salvar alterações</Button>',
+    vueCode: '<FewButton variant="primary">Salvar alterações</FewButton>',
   }),
   component({
     id: 'icon-button', name: 'IconButton', category: 'Ações',
@@ -18,6 +19,7 @@ export const actionsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['MUI IconButton', 'PrimeReact Button (icon-only)'],
     code: '<IconButton aria-label="Fechar">×</IconButton>',
+    vueCode: '<FewIconButton aria-label="Fechar">×</FewIconButton>',
   }),
   component({
     id: 'button-group', name: 'ButtonGroup', category: 'Ações',
@@ -27,6 +29,7 @@ export const actionsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['PrimeReact ButtonGroup', 'MUI ButtonGroup'],
     code: '<ButtonGroup><Button>Um</Button><Button>Dois</Button></ButtonGroup>',
+    vueCode: '<FewButtonGroup>\n  <FewButton>Um</FewButton>\n  <FewButton>Dois</FewButton>\n</FewButtonGroup>',
   }),
   component({
     id: 'toggle', name: 'Toggle', category: 'Ações',
@@ -36,6 +39,7 @@ export const actionsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix Toggle', 'MUI ToggleButton'],
     code: '<Toggle defaultPressed>Negrito</Toggle>',
+    vueCode: '<FewToggle default-pressed>Negrito</FewToggle>',
   }),
   component({
     id: 'toggle-group', name: 'ToggleGroup', category: 'Ações',
@@ -45,6 +49,7 @@ export const actionsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix ToggleGroup', 'MUI ToggleButtonGroup'],
     code: '<ToggleGroup type="single" defaultValue="left"><ToggleGroup.Item value="left">Esquerda</ToggleGroup.Item></ToggleGroup>',
+    vueCode: '<FewToggleGroup type="single" default-value="left">\n  <FewToggleGroupItem value="left">Esquerda</FewToggleGroupItem>\n</FewToggleGroup>',
   }),
   component({
     id: 'split-button', name: 'SplitButton', category: 'Ações',
@@ -54,6 +59,7 @@ export const actionsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['PrimeReact SplitButton', 'MUI ButtonGroup + Menu'],
     code: '<SplitButton><SplitButton.Action>Publicar</SplitButton.Action><SplitButton.Trigger /><SplitButton.Content><SplitButton.Item>Salvar como rascunho</SplitButton.Item></SplitButton.Content></SplitButton>',
+    vueCode: '<FewSplitButton>\n  <FewSplitButtonAction>Publicar</FewSplitButtonAction>\n  <FewSplitButtonTrigger />\n  <FewSplitButtonContent>\n    <FewSplitButtonItem>Salvar como rascunho</FewSplitButtonItem>\n  </FewSplitButtonContent>\n</FewSplitButton>',
   }),
   component({
     id: 'link', name: 'Link', category: 'Ações',
@@ -63,5 +69,6 @@ export const actionsRegistry: ComponentRecord[] = [
     origins: ['Few · novo padrão'],
     references: ['Radix Slot', 'Next.js Link'],
     code: '<Link href="/painel">Ir para o painel</Link>',
+    vueCode: '<FewLink href="/painel">Ir para o painel</FewLink>',
   }),
 ];
