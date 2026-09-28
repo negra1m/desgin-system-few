@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", "module": "ESNext", "moduleResolution": "Bundler", "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "strict": true, "declaration": true, "outDir": "dist", "rootDir": "src", "skipLibCheck": true,
+    "useDefineForClassFields": false, "experimentalDecorators": false, "importHelpers": false
+  },
+  "angularCompilerOptions": { "compilationMode": "partial", "strictTemplates": true, "strictInjectionParameters": true, "strictInputAccessModifiers": true },
+  "include": ["src"]
+}

@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": { "noEmit": true, "rootDir": "..", "paths": { "@fewcompany/core": ["../core/src/index.ts"] } },
+  "include": ["src"]
+}

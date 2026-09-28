@@ -1,0 +1,30 @@
+{
+  "name": "@fewcompany/angular",
+  "version": "1.0.0",
+  "description": "Adaptador Angular (standalone, signals) do design system da Few Company, sobre @fewcompany/core.",
+  "type": "module",
+  "license": "UNLICENSED",
+  "repository": {"type":"git","url":"https://github.com/negra1m/desgin-system-few.git","directory":"packages/angular"},
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {".": {"types":"./dist/index.d.ts","import":"./dist/index.js"}, "./styles.css":"./dist/styles.css"},
+  "files": ["dist", "README.md"],
+  "sideEffects": ["**/*.css"],
+  "dependencies": {"@fewcompany/core": "1.0.0"},
+  "peerDependencies": {"@angular/core": "^22.0.0", "@angular/common": "^22.0.0"},
+  "devDependencies": {
+    "@angular/common": "22.2.0",
+    "@angular/compiler": "22.2.0",
+    "@angular/compiler-cli": "22.2.0",
+    "@angular/core": "22.2.0",
+    "@angular/platform-browser": "22.2.0",
+    "@angular/platform-server": "22.2.0",
+    "rxjs": "^7.8.2"
+  },
+  "scripts": {
+    "build": "ngc -p tsconfig.build.json && ngc -p tsconfig.full.json && node scripts/fix-esm.mjs && node scripts/copy-css.mjs",
+    "typecheck": "ngc -p tsconfig.json",
+    "prepack": "npm run build"
+  },
+  "publishConfig": {"access":"restricted"}
+}

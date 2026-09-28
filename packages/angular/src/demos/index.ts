@@ -1,6 +1,5 @@
-// Lógica pura, sem DOM e sem framework. Cada categoria tem seu barrel.
-export * from './shared.js';
-export * from './position.js';
+// Hosts de demonstração por categoria (usados nos testes SSR e, futuramente, num catálogo Angular).
+export * from './utilities.js';
 export * from './actions.js';
 export * from './forms.js';
 export * from './pickers.js';
