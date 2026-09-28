@@ -71,7 +71,7 @@ main:focus { outline: none; }
 .text-link { border: 0; background: none; font-size: 11px; padding: 0; color: #c9b9e1; }
 .text-link:hover { color: #fff; }
 .text-link > span { margin-left: 10px; }
-.hero-meta { display: flex; gap: 17px; font: 9px ui-monospace, Consolas, monospace; letter-spacing: .8px; color: #a198b5; margin-top: 34px; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 10px 17px; font: 9px ui-monospace, Consolas, monospace; letter-spacing: .8px; color: #a198b5; margin-top: 34px; }
 .hero-meta span { display: flex; align-items: center; gap: 7px; }
 .hero-meta span::before { content: ''; width: 3px; height: 3px; border: 1px solid #9d8aaf; transform: rotate(45deg); }
 .hero-visual { min-width: 0; height: 455px; position: relative; perspective: 900px; --tilt-x: 0deg; --tilt-y: 0deg; }
